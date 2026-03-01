@@ -1,11 +1,13 @@
-import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
-import { Bookmark, ChevronLeft, Share2 } from 'lucide-react-native';
+import { Stack, useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
+import { Bookmark, ChevronLeft, Moon, Share2, Sun } from 'lucide-react-native';
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, ScrollView, StatusBar, Text, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Alert, Pressable, ScrollView, Share, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 
 // Imported offline full Quran text
 import quranEnglish from '../../assets/data/quran-en.json';
+import quranMalayalam from '../../assets/data/quran-ml.json';
 import quranUthmani from '../../assets/data/quran-uthmani.json';
+import { getBookmarks, getLastRead, setLastRead, toggleBookmark } from '../../utils/bookmarks';
 
 interface JuzSurahGroup {
     surahNumber: number;
@@ -13,15 +15,82 @@ interface JuzSurahGroup {
     surahEnglishName: string;
     ayahsArabic: any[];
     ayahsEnglish: any[];
+    ayahsMalayalam: any[];
 }
 
 export default function JuzScreen() {
-    const { id } = useLocalSearchParams();
+    const { id, scrollToAyah, showAyahs, viewMode: initialViewMode } = useLocalSearchParams();
+    const targetAyah = (scrollToAyah || showAyahs) as string;
     const router = useRouter();
+
+    const scrollViewRef = React.useRef<ScrollView>(null);
+    const ayahLayouts = React.useRef<{ [key: string]: number }>({});
 
     const [juzGroups, setJuzGroups] = useState<JuzSurahGroup[]>([]);
     const [loading, setLoading] = useState(true);
-    const [viewMode, setViewMode] = useState('Reading'); // 'Reading' | 'Translation'
+    const [viewMode, setViewMode] = useState(initialViewMode ? (initialViewMode as string) : (targetAyah ? 'Translation' : 'Reading')); // Default to Translation if scrolling to Ayah
+    const [startIndexGroup, setStartIndexGroup] = useState<number>(0);
+    const [startIndexAyah, setStartIndexAyah] = useState<number>(0);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [readingTheme, setReadingTheme] = useState<'dark' | 'light'>('dark');
+    const [translationLanguage, setTranslationLanguage] = useState<'ml' | 'en'>('ml'); // Default to Malayalam
+    const [bookmarkedAyahs, setBookmarkedAyahs] = useState<Set<string>>(new Set());
+    const [lastReadAyahKey, setLastReadAyahKey] = useState<string | null>(null);
+
+    useFocusEffect(
+        React.useCallback(() => {
+            if (!id) return;
+            const loadData = async () => {
+                const bookmarks = await getBookmarks();
+                const bookmarksSet = new Set(bookmarks.map(b => `${b.surahNumber}-${b.ayahNumber}`));
+                setBookmarkedAyahs(bookmarksSet);
+
+                const lastRead = await getLastRead();
+                if (lastRead && lastRead.type === 'Juz' && lastRead.id === id.toString()) {
+                    setLastReadAyahKey(`${lastRead.surahNumber}-${lastRead.ayahNumber}`);
+                } else {
+                    setLastReadAyahKey(null);
+                }
+            };
+            loadData();
+        }, [id])
+    );
+
+    const handleBookmarkToggle = (surahNumber: number, ayahNumber: number) => {
+        const key = `${surahNumber}-${ayahNumber}`;
+
+        // Use setTimeout to allow TouchableOpacity's animation to finish
+        setTimeout(async () => {
+            setBookmarkedAyahs(prev => {
+                const next = new Set(prev);
+                if (next.has(key)) {
+                    next.delete(key);
+                } else {
+                    next.add(key);
+                }
+                return next;
+            });
+
+            await toggleBookmark(surahNumber, ayahNumber);
+        }, 50);
+    };
+
+    const promptSetLastRead = (surahNumber: number, ayahNumber: number, surahName: string) => {
+        Alert.alert(
+            "Mark Last Read",
+            `Do you want to mark ${surahName} Ayah ${ayahNumber} as your last read point?`,
+            [
+                { text: "Cancel", style: "cancel" },
+                {
+                    text: "Mark",
+                    onPress: async () => {
+                        await setLastRead('Juz', id as string, surahNumber, ayahNumber, surahName, viewMode as 'Reading' | 'Translation');
+                        setLastReadAyahKey(`${surahNumber}-${ayahNumber}`);
+                    }
+                }
+            ]
+        );
+    };
 
     // Helper to robustly strip Bismillah from Ayah 1 of Surahs (except Al-Fatihah)
     const removeBismillah = (text: string, surahId: string) => {
@@ -36,17 +105,60 @@ export default function JuzScreen() {
         return cleaned.trim();
     };
 
-    const getJuzReadingText = (group: JuzSurahGroup) => {
+    const handleShareAyah = async (arabicText: string, englishText: string, surahName: string, surahNumber: number, ayahNumber: number) => {
+        try {
+            const message = `${arabicText}\n\n"${englishText}"\n\n— Quran ${surahName} ${surahNumber}:${ayahNumber}`;
+
+            await Share.share({
+                message,
+                title: `Share Ayah ${surahNumber}:${ayahNumber}`
+            });
+        } catch (error: any) {
+            console.error('Error sharing ayah:', error.message);
+        }
+    };
+
+    const getJuzReadingText = (group: JuzSurahGroup, groupIndex: number) => {
         if (!group || !group.ayahsArabic) return '';
-        return group.ayahsArabic.map((ayah: any) => {
+
+        let ayahsToRender = group.ayahsArabic;
+        if (groupIndex === startIndexGroup) {
+            ayahsToRender = group.ayahsArabic.slice(startIndexAyah);
+        }
+
+        return ayahsToRender.map((ayah: any) => {
             const cleanText = (ayah.numberInSurah === 1)
                 ? removeBismillah(ayah.text, group.surahNumber.toString())
                 : ayah.text;
             const arabicNumber = ayah.numberInSurah
                 .toString()
                 .replace(/\d/g, (d: string) => '٠١٢٣٤٥٦٧٨٩'[parseInt(d)]);
-            return `${cleanText} ۝${arabicNumber}  `;
-        }).join('');
+            const key = `${group.surahNumber}-${ayah.numberInSurah}`;
+            const isTarget = targetAyah === key;
+
+            return (
+                <Text
+                    key={ayah.numberInSurah}
+                    onLayout={(event) => {
+                        if (isTarget) {
+                            const y = event.nativeEvent.layout.y;
+                            setTimeout(() => {
+                                scrollViewRef.current?.scrollTo({ y, animated: true });
+                            }, 250);
+                        }
+                    }}
+                >
+                    {cleanText}
+                    <Text
+                        onPress={() => promptSetLastRead(group.surahNumber, ayah.numberInSurah, group.surahEnglishName)}
+                        className={lastReadAyahKey === key ? "text-[#10b981]" : isTarget ? "text-[#10b981]" : ""}
+                        style={{ paddingHorizontal: 15, paddingVertical: 10 }}
+                    >
+                        {'  '}۝{arabicNumber}{'  '}
+                    </Text>
+                </Text>
+            );
+        });
     };
 
     useEffect(() => {
@@ -59,9 +171,11 @@ export default function JuzScreen() {
         for (let i = 0; i < quranUthmani.surahs.length; i++) {
             const surahAr = quranUthmani.surahs[i];
             const surahEn = quranEnglish.surahs[i];
+            const surahMl = quranMalayalam.surahs[i];
 
             const ayahsInJuzAr = surahAr.ayahs.filter((a: any) => a.juz === targetJuz);
             const ayahsInJuzEn = surahEn.ayahs.filter((a: any) => a.juz === targetJuz);
+            const ayahsInJuzMl = surahMl.ayahs.filter((a: any) => a.juz === targetJuz);
 
             if (ayahsInJuzAr.length > 0) {
                 groups.push({
@@ -69,8 +183,29 @@ export default function JuzScreen() {
                     surahName: surahAr.name,
                     surahEnglishName: surahAr.englishName,
                     ayahsArabic: ayahsInJuzAr,
-                    ayahsEnglish: ayahsInJuzEn
+                    ayahsEnglish: ayahsInJuzEn,
+                    ayahsMalayalam: ayahsInJuzMl
                 });
+            }
+        }
+
+        if (targetAyah) {
+            // targetAyah format for Juz is 'surahNumber-ayahNumber'
+            let foundGroupIndex = -1;
+            let foundAyahIndex = -1;
+
+            for (let g = 0; g < groups.length; g++) {
+                const aIndex = groups[g].ayahsArabic.findIndex((a: any) => `${groups[g].surahNumber}-${a.numberInSurah}` === targetAyah);
+                if (aIndex > -1) {
+                    foundGroupIndex = g;
+                    foundAyahIndex = aIndex;
+                    break;
+                }
+            }
+
+            if (foundGroupIndex > -1) {
+                setStartIndexGroup(foundGroupIndex);
+                setStartIndexAyah(foundAyahIndex);
             }
         }
 
@@ -90,16 +225,16 @@ export default function JuzScreen() {
         return (
             <View className="flex-1 bg-[#050f05] items-center justify-center">
                 <Text className="text-white text-lg">Juz not found.</Text>
-                <TouchableOpacity onPress={() => router.back()} className="mt-4 bg-[#10b981] px-6 py-2 rounded-full">
+                <Pressable onPress={() => router.back()} className="mt-4 bg-[#10b981] px-6 py-2 rounded-full" style={({ pressed }) => ({ opacity: pressed ? 0.7 : 1 })}>
                     <Text className="text-[#050f05] font-bold">Go Back</Text>
-                </TouchableOpacity>
+                </Pressable>
             </View>
         );
     }
 
     return (
-        <View className="flex-1 bg-[#050f05]">
-            <StatusBar barStyle="light-content" backgroundColor="#050f05" />
+        <View className="flex-1 pt-7 bg-[#050f05]">
+            <StatusBar barStyle="light-content" />
 
             <Stack.Screen
                 options={{
@@ -108,22 +243,28 @@ export default function JuzScreen() {
             />
 
             {/* Header */}
-            <View className="flex-row items-center justify-between px-4 py-3 border-b border-[#142114] mt-7">
-                <TouchableOpacity onPress={() => router.back()} className="p-2">
+            <View className="flex-row items-center justify-between px-4 py-3 border-b border-[#142114] mt-2">
+                <Pressable onPress={() => router.back()} className="p-2 w-11" style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1 })}>
                     <ChevronLeft size={28} color="white" />
-                </TouchableOpacity>
-                <View className="items-center">
-                    <Text className="text-white font-bold text-xl">Juz {id}</Text>
-                    <Text className="text-gray-400 text-xs text-center" numberOfLines={1}>
+                </Pressable>
+                <View className="items-center flex-1">
+                    <Text className="font-bold text-xl text-white">Juz {id}</Text>
+                    <Text className="text-xs text-center text-gray-400" numberOfLines={1}>
                         {juzGroups.map(g => g.surahEnglishName).join(', ')}
                     </Text>
                 </View>
-                <View className="w-11" />
+                <Pressable
+                    onPress={() => setReadingTheme(prev => prev === 'dark' ? 'light' : 'dark')}
+                    className="p-2 w-11 items-end"
+                    style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1 })}
+                >
+                    {readingTheme === 'dark' ? <Sun size={24} color="#10b981" /> : <Moon size={24} color="#059669" />}
+                </Pressable>
             </View>
 
             {/* View Mode Switcher */}
             <View className="px-16 py-2 border-b border-[#142114]">
-                <View className="flex-row bg-[#142114] p-1 rounded-xl">
+                <View className="flex-row p-1 rounded-xl bg-[#142114]">
                     <TouchableOpacity
                         activeOpacity={1}
                         onPress={() => setViewMode('Reading')}
@@ -151,75 +292,142 @@ export default function JuzScreen() {
                         </Text>
                     </TouchableOpacity>
                 </View>
+
+                {/* Sub-toggle for Language if Translation mode is active */}
+                {viewMode === 'Translation' && (
+                    <View className="flex-row justify-center mt-4 mb-2 space-x-6">
+                        <Pressable
+                            onPress={() => setTranslationLanguage('ml')}
+                            className={`px-3 py-1 rounded-full border ${translationLanguage === 'ml' ? 'border-[#10b981] bg-[#10b98120]' : 'border-[#6b7280] bg-transparent'}`}
+                            style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1 })}
+                        >
+                            <Text className="text-sm font-bold" style={{ color: translationLanguage === 'ml' ? '#10b981' : '#6b7280' }}>Malayalam</Text>
+                        </Pressable>
+                        <View className="w-2" />
+                        <Pressable
+                            onPress={() => setTranslationLanguage('en')}
+                            className={`px-3 py-1 rounded-full border ${translationLanguage === 'en' ? 'border-[#10b981] bg-[#10b98120]' : 'border-[#6b7280] bg-transparent'}`}
+                            style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1 })}
+                        >
+                            <Text className="text-sm font-bold" style={{ color: translationLanguage === 'en' ? '#10b981' : '#6b7280' }}>English</Text>
+                        </Pressable>
+                    </View>
+                )}
             </View>
 
             {/* Ayahs Content */}
-            <ScrollView className="flex-1 px-4 mt-4" contentContainerStyle={{ paddingBottom: 100 }}>
-                {juzGroups.map((group, groupIndex) => (
-                    <View key={`surah-${group.surahNumber}`} className="mb-8">
+            <ScrollView ref={scrollViewRef} className={`flex-1 px-4 mt-4 ${readingTheme === 'dark' ? 'bg-[#050f05]' : 'bg-[#f9fafb]'}`} contentContainerStyle={{ paddingBottom: 100 }}>
+                {((startIndexGroup > 0 || startIndexAyah > 0) && !isScrolled) && (
+                    <TouchableOpacity
+                        onPress={() => { setStartIndexGroup(0); setStartIndexAyah(0); }}
+                        className="items-center justify-center py-4 mb-6 rounded-2xl border"
+                        style={{
+                            backgroundColor: readingTheme === 'dark' ? '#142114' : '#ffffff',
+                            borderColor: readingTheme === 'dark' ? '#2d3a2d' : '#e5e7eb',
+                            shadowOpacity: readingTheme === 'dark' ? 0 : 0.05,
+                            shadowRadius: 2,
+                            shadowOffset: { width: 0, height: 1 },
+                            elevation: readingTheme === 'dark' ? 0 : 1,
+                        }}
+                    >
+                        <Text className={`font-bold ${readingTheme === 'dark' ? 'text-[#10b981]' : 'text-[#059669]'}`}>Load Beginning of Juz</Text>
+                    </TouchableOpacity>
+                )}
 
-                        {/* Surah Header for this Juz portion */}
-                        <View className="items-center justify-center py-6 mb-4">
-                            <Text className="text-[#10b981] text-2xl font-bold" style={{ fontFamily: 'System' }}>
-                                سُورَةُ {group.surahEnglishName}
-                            </Text>
-                        </View>
+                {juzGroups.slice(startIndexGroup).map((group, slicedGroupIndex) => {
+                    const actualGroupIndex = slicedGroupIndex + startIndexGroup;
+                    let ayahsToRender = group.ayahsArabic;
+                    let englishAyahsToRender = group.ayahsEnglish;
+                    let malayalamAyahsToRender = group.ayahsMalayalam;
 
-                        {/* Translation Mode */}
-                        {viewMode === 'Translation' && group.ayahsArabic.map((ayahAr: any, idx: number) => {
-                            const ayahEn = group.ayahsEnglish[idx];
-                            // Apply helper to remove bismillah specifically from ayah 1 (unless Fatihah)
-                            const cleanText = (ayahAr.numberInSurah === 1)
-                                ? removeBismillah(ayahAr.text, group.surahNumber.toString())
-                                : ayahAr.text;
+                    if (actualGroupIndex === startIndexGroup) {
+                        ayahsToRender = group.ayahsArabic.slice(startIndexAyah);
+                        englishAyahsToRender = group.ayahsEnglish.slice(startIndexAyah);
+                        malayalamAyahsToRender = group.ayahsMalayalam.slice(startIndexAyah);
+                    }
 
-                            return (
-                                <View key={ayahAr.numberInSurah} className="mb-8 border-b border-[#142114] pb-6">
-                                    {/* Actions Bar for Ayah */}
-                                    <View className="flex-row items-center justify-between bg-[#142114] px-4 py-2 rounded-xl mb-4">
-                                        <View className="bg-[#10b981] w-8 h-8 rounded-full items-center justify-center">
-                                            <Text className="text-[#050f05] font-bold text-sm">{ayahAr.numberInSurah}</Text>
-                                        </View>
-                                        <View className="flex-row space-x-6">
-                                            <TouchableOpacity>
-                                                <Share2 size={20} color="#10b981" />
-                                            </TouchableOpacity>
-                                            <View className="w-4" />
-                                            <TouchableOpacity>
-                                                <Bookmark size={20} color="#10b981" />
-                                            </TouchableOpacity>
-                                        </View>
-                                    </View>
+                    return (
+                        <View key={`surah-${group.surahNumber}`} className="mb-8">
 
-                                    {/* Arabic Text (Uthmani) */}
-                                    <Text
-                                        className="text-white text-3xl leading-[55px] text-right mb-6"
-                                        style={{ fontFamily: 'System' }}
-                                    >
-                                        {cleanText}
-                                    </Text>
-
-                                    {/* English Translation */}
-                                    <Text className="text-gray-300 text-lg leading-7">
-                                        {ayahEn.text}
-                                    </Text>
-                                </View>
-                            );
-                        })}
-
-                        {/* Reading Mode */}
-                        {viewMode === 'Reading' && (
-                            <View className="mb-8 px-2 pb-12">
-                                <Text
-                                    className="text-white text-[28px] leading-[60px] text-justify"
-                                    style={{ fontFamily: 'System', writingDirection: 'rtl' }}
-                                >
-                                    {getJuzReadingText(group)}
+                            {/* Surah Header for this Juz portion */}
+                            <View className="items-center justify-center py-6 mb-4">
+                                <Text className={`text-2xl font-bold ${readingTheme === 'dark' ? 'text-[#10b981]' : 'text-[#059669]'}`} style={{ fontFamily: 'System' }}>
+                                    سُورَةُ {group.surahEnglishName}
                                 </Text>
                             </View>
-                        )}
-                    </View>
-                ))}
+
+                            {/* Translation Mode */}
+                            {viewMode === 'Translation' && ayahsToRender.map((ayahAr: any, idx: number) => {
+                                const ayahEn = englishAyahsToRender[idx];
+                                const ayahMl = malayalamAyahsToRender[idx];
+
+                                // Apply helper to remove bismillah specifically from ayah 1 (unless Fatihah)
+                                const cleanText = (ayahAr.numberInSurah === 1)
+                                    ? removeBismillah(ayahAr.text, group.surahNumber.toString())
+                                    : ayahAr.text;
+
+                                const displayTranslationText = translationLanguage === 'ml' ? ayahMl?.text : ayahEn?.text;
+
+                                const themeActiveColor = readingTheme === 'dark' ? '#10b981' : '#059669';
+
+                                return (
+                                    <View
+                                        key={`${group.surahNumber}-${ayahAr.numberInSurah}`}
+                                        className={`mb-8 border-b pb-6 ${readingTheme === 'dark' ? 'border-[#142114]' : 'border-gray-200'}`}
+                                    >
+                                        {/* Actions Bar for Ayah */}
+                                        <View className={`flex-row items-center justify-between px-4 py-2 rounded-xl mb-4 ${readingTheme === 'dark' ? 'bg-[#142114]' : 'bg-gray-100'}`}>
+                                            <TouchableOpacity
+                                                onPress={() => promptSetLastRead(group.surahNumber, ayahAr.numberInSurah, group.surahEnglishName)}
+                                                className={`w-8 h-8 rounded-full items-center justify-center ${readingTheme === 'dark' ? 'bg-[#10b981]' : 'bg-[#059669]'}`}>
+                                                <Text className={`font-bold text-sm ${readingTheme === 'dark' ? 'text-[#050f05]' : 'text-white'}`}>{ayahAr.numberInSurah}</Text>
+                                            </TouchableOpacity>
+                                            <View className="flex-row space-x-6">
+                                                <Pressable
+                                                    onPress={() => handleShareAyah(cleanText, displayTranslationText, group.surahEnglishName, group.surahNumber, ayahAr.numberInSurah)}
+                                                    style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1 })}
+                                                >
+                                                    <Share2 size={23} color={themeActiveColor} />
+                                                </Pressable>
+                                                <View className="w-7" />
+                                                <Pressable
+                                                    onPress={() => handleBookmarkToggle(group.surahNumber, ayahAr.numberInSurah)}
+                                                    style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1 })}
+                                                >
+                                                    <Bookmark size={23} color={themeActiveColor} fill={bookmarkedAyahs.has(`${group.surahNumber}-${ayahAr.numberInSurah}`) ? themeActiveColor : "transparent"} />
+                                                </Pressable>
+                                            </View>
+                                        </View>
+
+                                        {/* Arabic Text (Uthmani) */}
+                                        <Text
+                                            className={`text-3xl leading-[55px] text-right mb-6 ${readingTheme === 'dark' ? 'text-white' : 'text-gray-900'}`}
+                                            style={{ fontFamily: 'System' }}
+                                        >
+                                            {cleanText}
+                                        </Text>
+
+                                        {/* Translation */}
+                                        <Text className={`text-lg leading-7 ${readingTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
+                                            {displayTranslationText}
+                                        </Text>
+                                    </View>
+                                );
+                            })}
+
+                            {viewMode === 'Reading' && (
+                                <View className="mb-8 px-2 pb-12">
+                                    <Text
+                                        className={`text-[28px] leading-[60px] text-justify ${readingTheme === 'dark' ? 'text-white' : 'text-gray-900'}`}
+                                        style={{ fontFamily: 'System', writingDirection: 'rtl' }}
+                                    >
+                                        {getJuzReadingText(group, actualGroupIndex)}
+                                    </Text>
+                                </View>
+                            )}
+                        </View>
+                    )
+                })}
             </ScrollView>
         </View>
     );

@@ -1,5 +1,5 @@
 import { useRouter } from 'expo-router';
-import { Search, User } from 'lucide-react-native';
+import { Bookmark, Search } from 'lucide-react-native';
 import React, { useState } from 'react';
 import { ScrollView, StatusBar, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
@@ -31,8 +31,8 @@ export default function QuranScreen() {
             {/* Header */}
             <View className="flex-row justify-between items-center px-6 py-4">
                 <Text className="text-white text-3xl font-bold">Quran Library</Text>
-                <TouchableOpacity className="bg-[#1a2e1a] p-2 rounded-full">
-                    <User size={24} color="#10b981" />
+                <TouchableOpacity onPress={() => router.push('/bookmarks')} className="bg-[#1a2e1a] p-2 rounded-full">
+                    <Bookmark size={24} color="#10b981" />
                 </TouchableOpacity>
             </View>
 

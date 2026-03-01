@@ -4,13 +4,14 @@ import { useConnectivity } from '@/hooks/use-connectivity';
 import { CalculationMethod, Coordinates, PrayerTimes } from 'adhan';
 import dayjs from 'dayjs';
 import 'dayjs/locale/ar';
-import { useRouter } from 'expo-router';
-import { Bell, BookOpen, Bookmark, Compass, Copy, Landmark, MapPin, RefreshCw } from 'lucide-react-native';
+import { useFocusEffect, useRouter } from 'expo-router';
+import { Bell, Bookmark, BookOpen, Compass, Copy, Landmark, MapPin, RefreshCw } from 'lucide-react-native';
 import React, { useCallback, useEffect, useState } from 'react';
-import { ActivityIndicator, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Alert, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { getBookmarks, getLastRead, LastReadItem } from '../../utils/bookmarks';
 
-const ActionCard = ({ icon, title, sub }: { icon: React.ReactNode, title: string, sub: string }) => (
-  <TouchableOpacity className="bg-[#141b14] w-[48%] rounded-[24px] p-5 mb-4 border border-gray-900 shadow-sm">
+const ActionCard = ({ icon, title, sub, onPress }: { icon: React.ReactNode, title: string, sub: string, onPress?: () => void }) => (
+  <TouchableOpacity onPress={onPress} className="bg-[#141b14] w-[48%] rounded-[24px] p-5 mb-4 border border-gray-900 shadow-sm">
     <View className="bg-[#0a0f0a] w-12 h-12 rounded-2xl items-center justify-center mb-6">
       {icon}
     </View>
@@ -28,7 +29,41 @@ export default function TodayScreen() {
   const [nextPrayer, setNextPrayer] = useState<{ name: string; time: string; countdown: string } | null>(null);
   const [hijriDate, setHijriDate] = useState<string>('Loading...');
   const [isDataLoading, setIsDataLoading] = useState(true);
+  const [bookmarksCount, setBookmarksCount] = useState<number>(0);
+  const [lastReadData, setLastReadData] = useState<LastReadItem | null>(null);
   const isConnected = useConnectivity();
+
+  useFocusEffect(
+    React.useCallback(() => {
+      const loadCounts = async () => {
+        const bookmarks = await getBookmarks();
+        setBookmarksCount(bookmarks.length);
+
+        const lastRead = await getLastRead();
+        setLastReadData(lastRead);
+      };
+      loadCounts();
+    }, [])
+  );
+
+  const handleLastReadPress = () => {
+    if (lastReadData) {
+      const modeParam = lastReadData.viewMode ? `&viewMode=${lastReadData.viewMode}` : '';
+      if (lastReadData.type === 'Surah') {
+        router.push(`/surah/${lastReadData.id}?showAyahs=${lastReadData.ayahNumber}${modeParam}` as any);
+      } else if (lastReadData.type === 'Juz') {
+        const juzParam = lastReadData.surahNumber && lastReadData.ayahNumber
+          ? `?showAyahs=${lastReadData.surahNumber}-${lastReadData.ayahNumber}${modeParam}`
+          : modeParam ? `?viewMode=${lastReadData.viewMode}` : '';
+        router.push(`/juz/${lastReadData.id}${juzParam}` as any);
+      }
+    } else {
+      Alert.alert(
+        "No Last Read Point",
+        "You haven't marked a resting point yet. Tap the Ayah number badge (in Translation view) or the ۝ symbol (in Reading view) to save your progress."
+      );
+    }
+  };
 
   const fetchHijriDate = async (lat: number, lon: number) => {
     if (!isConnected) {
@@ -254,8 +289,13 @@ export default function TodayScreen() {
 
         {/* Actions Grid */}
         <View className="flex-row flex-wrap justify-between">
-          <ActionCard icon={<BookOpen size={22} color="#10b981" />} title="Last Read" sub="Al-Baqarah: 255" />
-          <ActionCard icon={<Bookmark size={22} color="#facc15" />} title="Bookmarks" sub="12 Saved Ayats" />
+          <ActionCard
+            onPress={handleLastReadPress}
+            icon={<BookOpen size={22} color="#10b981" />}
+            title="Last Read"
+            sub={lastReadData ? `${lastReadData.surahEnglishName}: ${lastReadData.ayahNumber}` : "Not Marked"}
+          />
+          <ActionCard onPress={() => router.push('/bookmarks')} icon={<Bookmark size={22} color="#facc15" />} title="Bookmarks" sub={`${bookmarksCount} Saved Ayats`} />
           <ActionCard icon={<Compass size={22} color="#10b981" />} title="Qibla Finder" sub="291.5° NW" />
           <ActionCard icon={<Landmark size={22} color="#facc15" />} title="Zakat" sub="Calculator & Pay" />
         </View>
