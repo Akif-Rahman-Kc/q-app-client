@@ -1,3 +1,4 @@
+import { LinearGradient } from 'expo-linear-gradient';
 import { Stack, useFocusEffect, useRouter } from 'expo-router';
 import { Bookmark as BookmarkIcon, BookOpen, ChevronLeft, Trash2 } from 'lucide-react-native';
 import React, { useState } from 'react';
@@ -94,8 +95,11 @@ export default function BookmarksScreen() {
     };
 
     return (
-        <View className="flex-1 bg-[#050f05]">
-            <StatusBar barStyle="light-content" backgroundColor="#050f05" />
+        <LinearGradient
+            colors={['#0a0f0a', '#0f1a14', '#0a0f0a']}
+            style={{ flex: 1 }}
+        >
+            <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
 
             <Stack.Screen
                 options={{
@@ -188,7 +192,7 @@ export default function BookmarksScreen() {
                             {/* Content */}
                             <View className="p-5">
                                 <Text
-                                    className="text-white text-[26px] leading-[45px] text-right mb-4"
+                                    className="text-white text-[26px] leading-[45px] font-bold text-right mb-4"
                                     style={{ fontFamily: 'System' }}
                                 >
                                     {bookmark.arabicText}
@@ -204,6 +208,6 @@ export default function BookmarksScreen() {
                     ))}
                 </ScrollView>
             )}
-        </View>
+        </LinearGradient>
     );
 }

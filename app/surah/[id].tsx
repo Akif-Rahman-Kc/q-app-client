@@ -1,17 +1,19 @@
 import { Stack, useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { Bookmark, ChevronLeft, Moon, Share2, Sun } from 'lucide-react-native';
-import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Alert, Pressable, ScrollView, Share, StatusBar, Text, TouchableOpacity, View } from 'react-native';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { ActivityIndicator, AppState, Pressable, ScrollView, Share, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 
 // Imported offline full Quran text
+import CustomAlert from '@/components/CustomAlert';
 import quranEnglish from '../../assets/data/quran-en.json';
 import quranMalayalam from '../../assets/data/quran-ml.json';
 import quranUthmani from '../../assets/data/quran-uthmani.json';
 import { getBookmarks, getLastRead, setLastRead, toggleBookmark } from '../../utils/bookmarks';
+import { addQuranReadingSession } from '../../utils/profile-stats';
 
 export default function SurahScreen() {
     const { id, scrollToAyah, showAyahs, viewMode: initialViewMode } = useLocalSearchParams();
-    const targetAyah = (scrollToAyah || showAyahs) as string;
+    const [activeTargetAyah, setActiveTargetAyah] = useState<string | null>((scrollToAyah || showAyahs) as string);
     const router = useRouter();
 
     const scrollViewRef = React.useRef<ScrollView>(null);
@@ -21,12 +23,37 @@ export default function SurahScreen() {
     const [surahEnglish, setSurahEnglish] = useState<any>(null);
     const [surahMalayalam, setSurahMalayalam] = useState<any>(null);
     const [loading, setLoading] = useState(true);
-    const [viewMode, setViewMode] = useState(initialViewMode ? (initialViewMode as string) : (targetAyah ? 'Translation' : 'Reading')); // Default to Translation if scrolling to Ayah
+    const [viewMode, setViewMode] = useState(initialViewMode ? (initialViewMode as string) : ((scrollToAyah || showAyahs) ? 'Translation' : 'Reading')); // Default to Translation if scrolling to Ayah
     const [startIndex, setStartIndex] = useState<number>(0);
     const [readingTheme, setReadingTheme] = useState<'dark' | 'light'>('dark');
     const [translationLanguage, setTranslationLanguage] = useState<'ml' | 'en'>('ml'); // Default to Malayalam
     const [bookmarkedAyahs, setBookmarkedAyahs] = useState<Set<number>>(new Set());
     const [lastReadAyahNumber, setLastReadAyahNumber] = useState<number | null>(null);
+
+    // Custom Alert State
+    const [alertConfig, setAlertConfig] = useState<{
+        visible: boolean;
+        title: string;
+        message: string;
+        type: 'success' | 'error' | 'info' | 'delete' | 'warning';
+        onConfirm: () => void;
+        showCancel: boolean;
+    }>({
+        visible: false,
+        title: '',
+        message: '',
+        type: 'info',
+        onConfirm: () => { },
+        showCancel: true
+    });
+
+    const showAlert = (config: Omit<typeof alertConfig, 'visible'>) => {
+        setAlertConfig({ ...config, visible: true });
+    };
+
+    const hideAlert = () => {
+        setAlertConfig(prev => ({ ...prev, visible: false }));
+    };
 
     useFocusEffect(
         React.useCallback(() => {
@@ -67,20 +94,18 @@ export default function SurahScreen() {
     };
 
     const promptSetLastRead = (ayahNumber: number, surahName: string) => {
-        Alert.alert(
-            "Mark Last Read",
-            `Do you want to mark Ayah ${ayahNumber} as your last read point?`,
-            [
-                { text: "Cancel", style: "cancel" },
-                {
-                    text: "Mark",
-                    onPress: async () => {
-                        await setLastRead('Surah', id as string, Number(id), ayahNumber, surahName, viewMode as 'Reading' | 'Translation');
-                        setLastReadAyahNumber(ayahNumber);
-                    }
-                }
-            ]
-        );
+        showAlert({
+            title: "Mark Last Read",
+            message: `Do you want to mark Ayah ${ayahNumber} as your last read point?`,
+            type: 'success',
+            onConfirm: async () => {
+                hideAlert();
+                await setLastRead('Surah', id as string, Number(id), ayahNumber, surahName, viewMode as 'Reading' | 'Translation');
+                setLastReadAyahNumber(ayahNumber);
+                setActiveTargetAyah(null);
+            },
+            showCancel: true
+        });
     };
 
     // Helper to robustly strip Bismillah from Ayah 1 of Surahs (except Al-Fatihah)
@@ -118,7 +143,7 @@ export default function SurahScreen() {
             const arabicNumber = ayah.numberInSurah
                 .toString()
                 .replace(/\d/g, (d: string) => '٠١٢٣٤٥٦٧٨٩'[parseInt(d)]);
-            const isTarget = targetAyah === ayah.numberInSurah.toString();
+            const isTarget = activeTargetAyah === ayah.numberInSurah.toString();
 
             return (
                 <Text
@@ -149,24 +174,83 @@ export default function SurahScreen() {
         if (!id) return;
 
         // Find by Surah number within the fully localized uthmani data
-        const arabicData = quranUthmani.surahs.find((s: any) => s.number.toString() === id.toString());
-        const englishData = quranEnglish.surahs.find((s: any) => s.number.toString() === id.toString());
-        const malayalamData = quranMalayalam.surahs.find((s: any) => s.number.toString() === id.toString());
+        let arabicData = quranUthmani.surahs.find((s: any) => s.number.toString() === id.toString());
+        let englishData = quranEnglish.surahs.find((s: any) => s.number.toString() === id.toString());
+        let malayalamData = quranMalayalam.surahs.find((s: any) => s.number.toString() === id.toString());
 
         if (arabicData && englishData && malayalamData) {
+            // Apply filtering if showAyahs is provided
+            if (showAyahs) {
+                const requestedAyahs = (showAyahs as string).split(',').map(n => n.trim());
+                arabicData = {
+                    ...arabicData,
+                    ayahs: arabicData.ayahs.filter((a: any) => requestedAyahs.includes(a.numberInSurah.toString()))
+                };
+                englishData = {
+                    ...englishData,
+                    ayahs: englishData.ayahs.filter((a: any) => requestedAyahs.includes(a.numberInSurah.toString()))
+                };
+                malayalamData = {
+                    ...malayalamData,
+                    ayahs: malayalamData.ayahs.filter((a: any) => requestedAyahs.includes(a.numberInSurah.toString()))
+                };
+            }
+
             setSurahArabic(arabicData);
             setSurahEnglish(englishData);
             setSurahMalayalam(malayalamData);
 
-            if (targetAyah) {
-                const index = arabicData.ayahs.findIndex((a: any) => a.numberInSurah.toString() === targetAyah);
+            // scrollToAyah should show the full surah but start from that index
+            // showAyahs should filter the surah
+            if (scrollToAyah && !showAyahs) {
+                const index = arabicData.ayahs.findIndex((a: any) => a.numberInSurah.toString() === scrollToAyah);
                 if (index > -1) {
                     setStartIndex(index);
                 }
+            } else {
+                setStartIndex(0);
             }
         }
         setLoading(false);
-    }, [id]);
+    }, [id, showAyahs]);
+
+    // Timer Logic using Focus State and App Backgrounding
+    const sessionStartTime = useRef<number | null>(null);
+
+    useFocusEffect(
+        useCallback(() => {
+            // Screen is focused
+            sessionStartTime.current = Date.now();
+
+            const subscription = AppState.addEventListener('change', nextAppState => {
+                if (nextAppState === 'active') {
+                    // Resumed
+                    sessionStartTime.current = Date.now();
+                } else if (nextAppState.match(/inactive|background/)) {
+                    // Backgrounded
+                    if (sessionStartTime.current && surahArabic) {
+                        const durationMs = Date.now() - sessionStartTime.current;
+                        const durationMinutes = Math.floor(durationMs / 60000);
+                        if (durationMinutes >= 1) {
+                            addQuranReadingSession(durationMinutes).catch(console.error);
+                        }
+                    }
+                }
+            });
+
+            return () => {
+                // Screen is unfocused or unmounted
+                subscription.remove();
+                if (sessionStartTime.current && surahArabic && AppState.currentState === 'active') {
+                    const durationMs = Date.now() - sessionStartTime.current;
+                    const durationMinutes = Math.floor(durationMs / 60000);
+                    if (durationMinutes >= 1) {
+                        addQuranReadingSession(durationMinutes).catch(console.error);
+                    }
+                }
+            };
+        }, [surahArabic, id])
+    );
 
     if (loading) {
         return (
@@ -264,9 +348,9 @@ export default function SurahScreen() {
             </View>
 
             {/* Bismillah Header (Except Surah 1 and 9 typically, but Bismillah is part of data if applicable) */}
-            <ScrollView ref={scrollViewRef} className={`flex-1 px-4 pt-4 ${readingTheme === 'dark' ? 'bg-[#050f05]' : 'bg-[#f9fafb]'}`} showsVerticalScrollIndicator={false}>
+            <ScrollView ref={scrollViewRef} className={`flex-1 px-4 pt-4 ${readingTheme === 'dark' ? 'bg-[#050f05]' : 'bg-[#c3dbc8]'}`} showsVerticalScrollIndicator={false}>
 
-                {(id !== '1' && id !== '9' && startIndex === 0) ? (
+                {(id !== '1' && id !== '9' && startIndex === 0 && !showAyahs) ? (
                     <View className="items-center justify-center py-6 mb-4">
                         <Text className={`text-3xl font-bold ${readingTheme === 'dark' ? 'text-[#10b981]' : 'text-[#059669]'}`} style={{ fontFamily: 'System' }}>
                             بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
@@ -274,7 +358,7 @@ export default function SurahScreen() {
                     </View>
                 ) : null}
 
-                {startIndex > 0 && (
+                {startIndex > 0 && !showAyahs && (
                     <TouchableOpacity
                         onPress={() => setStartIndex(0)}
                         className="items-center justify-center py-4 mb-6 rounded-2xl border"
@@ -300,19 +384,29 @@ export default function SurahScreen() {
                             const displayTranslationText = translationLanguage === 'ml' ? malayalamAyah?.text : englishAyah?.text;
 
                             const themeActiveColor = readingTheme === 'dark' ? '#10b981' : '#059669';
+                            const isLastRead = lastReadAyahNumber === ayah.numberInSurah;
+                            const isTarget = activeTargetAyah === ayah.numberInSurah.toString();
 
                             return (
                                 <View
                                     key={ayah.numberInSurah}
+                                    onLayout={(event) => {
+                                        if (isTarget) {
+                                            const y = event.nativeEvent.layout.y;
+                                            setTimeout(() => {
+                                                scrollViewRef.current?.scrollTo({ y: y - 20, animated: true });
+                                            }, 250);
+                                        }
+                                    }}
                                     className={`mb-8 border-b pb-6 ${readingTheme === 'dark' ? 'border-[#142114]' : 'border-gray-200'}`}
                                 >
 
                                     {/* Actions Bar for Ayah */}
-                                    <View className={`flex-row items-center justify-between px-4 py-2 rounded-xl mb-4 ${readingTheme === 'dark' ? 'bg-[#142114]' : 'bg-gray-100'}`}>
+                                    <View className={`flex-row items-center justify-between px-4 py-2 rounded-xl mb-4 ${readingTheme === 'dark' ? 'bg-[#142114]' : 'bg-gray-100'} ${isLastRead ? 'border border-[#10b98150]' : ''}`}>
                                         <TouchableOpacity
                                             onPress={() => promptSetLastRead(ayah.numberInSurah, surahEnglish?.englishName || '')}
-                                            className={`w-8 h-8 rounded-full items-center justify-center ${readingTheme === 'dark' ? 'bg-[#10b981]' : 'bg-[#059669]'}`}>
-                                            <Text className={`font-bold text-sm ${readingTheme === 'dark' ? 'text-[#050f05]' : 'text-white'}`}>{ayah.numberInSurah}</Text>
+                                            className={`w-8 h-8 rounded-full items-center justify-center ${isLastRead || isTarget ? 'bg-[#10b981]' : readingTheme === 'dark' ? 'bg-[#2d3a2d]' : 'bg-gray-300'}`}>
+                                            <Text className={`font-bold text-sm ${isLastRead || isTarget ? 'text-[#050f05]' : readingTheme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{ayah.numberInSurah}</Text>
                                         </TouchableOpacity>
                                         <View className="flex-row space-x-6">
                                             <TouchableOpacity onPress={() => handleShareAyah(removeBismillah(ayah.text, id as string), displayTranslationText || '', ayah.numberInSurah)}>
@@ -330,7 +424,7 @@ export default function SurahScreen() {
 
                                     {/* Arabic Text (Uthmani) */}
                                     <Text
-                                        className={`text-3xl leading-[55px] text-right mb-6 ${readingTheme === 'dark' ? 'text-white' : 'text-gray-900'}`}
+                                        className={`text-3xl leading-[55px] font-bold text-right mb-6 ${readingTheme === 'dark' ? 'text-white' : 'text-gray-900'}`}
                                         style={{ fontFamily: 'System' }}
                                     >
                                         {removeBismillah(ayah.text, id as string)}
@@ -347,7 +441,7 @@ export default function SurahScreen() {
                 ) : (
                     <View className="mb-8 px-2 pb-12">
                         <Text
-                            className={`text-[28px] leading-[60px] text-justify ${readingTheme === 'dark' ? 'text-white' : 'text-gray-900'}`}
+                            className={`text-[28px] leading-[60px] font-bold text-justify ${readingTheme === 'dark' ? 'text-white' : 'text-gray-900'}`}
                             style={{ fontFamily: 'System', writingDirection: 'rtl' }}
                         >
                             {getReadingText()}
@@ -356,7 +450,17 @@ export default function SurahScreen() {
                 )}
 
                 <View className="h-12" />
-            </ScrollView >
-        </View >
+            </ScrollView>
+
+            <CustomAlert
+                visible={alertConfig.visible}
+                title={alertConfig.title}
+                message={alertConfig.message}
+                type={alertConfig.type}
+                onConfirm={alertConfig.onConfirm}
+                onCancel={hideAlert}
+                showCancel={alertConfig.showCancel}
+            />
+        </View>
     );
 }

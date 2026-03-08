@@ -1,3 +1,4 @@
+import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { Bookmark, Search } from 'lucide-react-native';
 import React, { useState } from 'react';
@@ -25,14 +26,14 @@ export default function QuranScreen() {
     });
 
     return (
-        <View className="flex-1 bg-[#050f05] pt-8">
+        <LinearGradient colors={['#050f05', '#0a1a0f', '#050f05']} style={{ flex: 1, paddingTop: 32 }}>
             <StatusBar barStyle="light-content" />
 
             {/* Header */}
             <View className="flex-row justify-between items-center px-6 py-4">
                 <Text className="text-white text-3xl font-bold">Quran Library</Text>
-                <TouchableOpacity onPress={() => router.push('/bookmarks')} className="bg-[#1a2e1a] p-2 rounded-full">
-                    <Bookmark size={24} color="#10b981" />
+                <TouchableOpacity onPress={() => router.push('/bookmarks')} className="bg-[#1a2e1a] p-2.5 rounded-full border border-[#2d3a2d]">
+                    <Bookmark size={21} color="#10b981" />
                 </TouchableOpacity>
             </View>
 
@@ -151,10 +152,6 @@ export default function QuranScreen() {
                 <View className="h-8" />{/* Bottom Spacing */}
             </ScrollView>
 
-            {/* Floating Action Button */}
-            {/* <TouchableOpacity className="absolute bottom-6 right-6 bg-[#10b981] w-14 h-14 rounded-full items-center justify-center shadow-lg shadow-[#10b981]/40 elevation-5">
-                <Play size={24} color="#050f05" fill="#050f05" />
-            </TouchableOpacity> */}
-        </View>
+        </LinearGradient>
     );
 }

@@ -173,16 +173,15 @@ export default function PrayersScreen() {
                     colors={['rgba(5,8,5,0.2)', 'rgba(5,8,5,1)']}
                     className="flex-1 px-6 pt-14"
                 >
-                    {/* Top Bar */}
                     <View className="flex-row justify-between items-center mb-6">
-                        <TouchableOpacity onPress={refreshCurrentLocation} className="flex-row items-center bg-[#05080560] px-4 py-2.5 rounded-full border border-[#ffffff10] max-w-[80%]">
-                            <MapPin size={14} color="#10b981" />
+                        <TouchableOpacity onPress={refreshCurrentLocation} className="flex-row items-center bg-[#1a2e1a] px-4 py-2.5 rounded-full border border-[#2d3a2d] max-w-[80%]">
+                            <MapPin size={16} color="#10b981" />
                             <Text className="text-white font-bold text-[11px] ml-2 uppercase tracking-widest" numberOfLines={1}>
                                 {locationData?.name || 'Detecting...'}
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={refreshCurrentLocation} className="bg-[#ffffff10] p-2.5 rounded-full backdrop-blur-sm">
-                            <RefreshCw size={20} color="white" />
+                        <TouchableOpacity onPress={refreshCurrentLocation} className="bg-[#1a2e1a] p-2.5 rounded-full border border-[#2d3a2d] backdrop-blur-sm">
+                            <RefreshCw size={21} color="#10b981" />
                         </TouchableOpacity>
                     </View>
 
@@ -259,7 +258,7 @@ export default function PrayersScreen() {
                 })}
 
                 {/* Qibla Button */}
-                <TouchableOpacity onPress={() => router.push('/(tabs)')} className="mt-4 mb-12">
+                <TouchableOpacity onPress={() => router.push('/qibla')} className="mt-4 mb-12">
                     <View className="bg-[#10b98115] border border-[#10b98140] flex-row items-center justify-center py-5 rounded-[24px]">
                         <Compass size={22} color="#10b981" />
                         <Text className="text-[#10b981] font-bold text-[16px] tracking-wide ml-3">Find Qibla Direction</Text>

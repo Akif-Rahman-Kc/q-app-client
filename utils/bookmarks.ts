@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { syncQuranChallengeProgress } from './profile-stats';
 
 const BOOKMARKS_KEY = '@quran_bookmarks';
 
@@ -95,6 +96,9 @@ export const setLastRead = async (type: 'Surah' | 'Juz', id: string, surahNumber
             viewMode
         };
         await AsyncStorage.setItem(LAST_READ_KEY, JSON.stringify(item));
+
+        // Sync challenge progress automatically when Last Read updates
+        syncQuranChallengeProgress().catch(console.error);
     } catch (e) {
         console.error('Failed to set last read item', e);
     }

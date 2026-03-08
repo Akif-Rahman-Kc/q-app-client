@@ -1,13 +1,15 @@
+import CustomAlert from '@/components/CustomAlert';
 import { OfflineNotice } from '@/components/offline-notice';
 import { useLocationContext } from '@/contexts/LocationContext';
 import { useConnectivity } from '@/hooks/use-connectivity';
 import { CalculationMethod, Coordinates, PrayerTimes } from 'adhan';
 import dayjs from 'dayjs';
 import 'dayjs/locale/ar';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { Bell, Bookmark, BookOpen, Compass, Copy, Landmark, MapPin, RefreshCw } from 'lucide-react-native';
 import React, { useCallback, useEffect, useState } from 'react';
-import { ActivityIndicator, Alert, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { getBookmarks, getLastRead, LastReadItem } from '../../utils/bookmarks';
 
 const ActionCard = ({ icon, title, sub, onPress }: { icon: React.ReactNode, title: string, sub: string, onPress?: () => void }) => (
@@ -33,6 +35,31 @@ export default function TodayScreen() {
   const [lastReadData, setLastReadData] = useState<LastReadItem | null>(null);
   const isConnected = useConnectivity();
 
+  // Custom Alert State
+  const [alertConfig, setAlertConfig] = useState<{
+    visible: boolean;
+    title: string;
+    message: string;
+    type: 'success' | 'error' | 'info' | 'delete' | 'warning';
+    onConfirm: () => void;
+    showCancel: boolean;
+  }>({
+    visible: false,
+    title: '',
+    message: '',
+    type: 'info',
+    onConfirm: () => { },
+    showCancel: true
+  });
+
+  const showAlert = (config: Omit<typeof alertConfig, 'visible'>) => {
+    setAlertConfig({ ...config, visible: true });
+  };
+
+  const hideAlert = () => {
+    setAlertConfig(prev => ({ ...prev, visible: false }));
+  };
+
   useFocusEffect(
     React.useCallback(() => {
       const loadCounts = async () => {
@@ -50,18 +77,21 @@ export default function TodayScreen() {
     if (lastReadData) {
       const modeParam = lastReadData.viewMode ? `&viewMode=${lastReadData.viewMode}` : '';
       if (lastReadData.type === 'Surah') {
-        router.push(`/surah/${lastReadData.id}?showAyahs=${lastReadData.ayahNumber}${modeParam}` as any);
+        router.push(`/surah/${lastReadData.id}?scrollToAyah=${lastReadData.ayahNumber}${modeParam}` as any);
       } else if (lastReadData.type === 'Juz') {
         const juzParam = lastReadData.surahNumber && lastReadData.ayahNumber
-          ? `?showAyahs=${lastReadData.surahNumber}-${lastReadData.ayahNumber}${modeParam}`
+          ? `?scrollToAyah=${lastReadData.surahNumber}-${lastReadData.ayahNumber}${modeParam}`
           : modeParam ? `?viewMode=${lastReadData.viewMode}` : '';
         router.push(`/juz/${lastReadData.id}${juzParam}` as any);
       }
     } else {
-      Alert.alert(
-        "No Last Read Point",
-        "You haven't marked a resting point yet. Tap the Ayah number badge (in Translation view) or the ۝ symbol (in Reading view) to save your progress."
-      );
+      showAlert({
+        title: "No Last Read Point",
+        message: "You haven't marked a resting point yet. Tap the Ayah number badge (in Translation view) or the ۝ symbol (in Reading view) to save your progress.",
+        type: 'info',
+        onConfirm: hideAlert,
+        showCancel: false
+      });
     }
   };
 
@@ -165,7 +195,7 @@ export default function TodayScreen() {
   const nextPrayerNameRaw = prayerTimes ? prayerTimes.nextPrayer() : 'none';
 
   return (
-    <View className="flex-1 pt-14 bg-[#0a0f0a]">
+    <LinearGradient colors={['#050f05', '#0a1a0f', '#050f05']} style={{ flex: 1, paddingTop: 56 }}>
       {/* Header */}
       <View className="flex-row justify-between items-center px-6 mb-4">
         <TouchableOpacity onPress={() => router.push('/location-search')} className="flex-row items-center flex-1">
@@ -180,11 +210,11 @@ export default function TodayScreen() {
           </View>
         </TouchableOpacity>
         <View className="flex-row gap-4 ml-4">
-          <TouchableOpacity onPress={() => refreshCurrentLocation()} className="p-2.5 rounded-full bg-[#1a241a] border border-[#2d3a2d]">
-            <RefreshCw size={20} color="white" />
+          <TouchableOpacity onPress={() => refreshCurrentLocation()} className="p-2.5 rounded-full bg-[#1a2e1a] border border-[#2d3a2d]">
+            <RefreshCw size={21} color="#10b981" />
           </TouchableOpacity>
-          <TouchableOpacity className="p-2.5 rounded-full bg-[#1a241a] border border-[#2d3a2d]">
-            <Bell size={20} color="white" />
+          <TouchableOpacity onPress={() => router.push('/notifications')} className="p-2.5 rounded-full bg-[#1a2e1a] border border-[#2d3a2d]">
+            <Bell size={21} color="#10b981" />
           </TouchableOpacity>
         </View>
       </View>
@@ -284,7 +314,7 @@ export default function TodayScreen() {
         {/* Quick Actions Header */}
         <View className="flex-row justify-between items-center mb-5 px-1">
           <Text className="text-white font-extrabold text-[22px]">Quick Actions</Text>
-          <TouchableOpacity><Text className="text-[#10b981] font-bold text-[15px]">Edit</Text></TouchableOpacity>
+          <TouchableOpacity onPress={() => router.push('/quran')}><Text className="text-[#10b981] font-bold text-[15px]">Read</Text></TouchableOpacity>
         </View>
 
         {/* Actions Grid */}
@@ -296,8 +326,8 @@ export default function TodayScreen() {
             sub={lastReadData ? `${lastReadData.surahEnglishName}: ${lastReadData.ayahNumber}` : "Not Marked"}
           />
           <ActionCard onPress={() => router.push('/bookmarks')} icon={<Bookmark size={22} color="#facc15" />} title="Bookmarks" sub={`${bookmarksCount} Saved Ayats`} />
-          <ActionCard icon={<Compass size={22} color="#10b981" />} title="Qibla Finder" sub="291.5° NW" />
-          <ActionCard icon={<Landmark size={22} color="#facc15" />} title="Zakat" sub="Calculator & Pay" />
+          <ActionCard onPress={() => router.push('/qibla')} icon={<Compass size={22} color="#10b981" />} title="Qibla Finder" sub="Find Direction" />
+          <ActionCard onPress={() => router.push('/zakat')} icon={<Landmark size={22} color="#facc15" />} title="Zakat" sub="Calculator & Pay" />
         </View>
 
         {/* Ayat of the Day */}
@@ -319,6 +349,16 @@ export default function TodayScreen() {
           </View>
         </View>
       </ScrollView>
-    </View>
+
+      <CustomAlert
+        visible={alertConfig.visible}
+        title={alertConfig.title}
+        message={alertConfig.message}
+        type={alertConfig.type}
+        onConfirm={alertConfig.onConfirm}
+        onCancel={hideAlert}
+        showCancel={alertConfig.showCancel}
+      />
+    </LinearGradient>
   );
 }
