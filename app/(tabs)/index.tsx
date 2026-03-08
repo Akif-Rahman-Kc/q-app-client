@@ -331,7 +331,7 @@ export default function TodayScreen() {
         </View>
 
         {/* Ayat of the Day */}
-        <View className="bg-[#1a241a] rounded-[32px] p-7 mt-4 mb-12 border border-[#2d3a2d] shadow-lg">
+        <View className="bg-[#1a241a] rounded-[32px] p-7 mt-4 mb-4 border border-[#2d3a2d] shadow-lg">
           <View className="flex-row items-center mb-5">
             <Text className="text-yellow-500 mr-2.5 text-[16px]">✦</Text>
             <Text className="text-gray-400 font-extrabold tracking-[2px] text-[10px]">AYAT OF THE DAY</Text>
@@ -347,6 +347,11 @@ export default function TodayScreen() {
               <TouchableOpacity><Copy size={20} color="#6b7280" /></TouchableOpacity>
             </View>
           </View>
+        </View>
+
+        {/* App Version */}
+        <View className="pb-6 items-center justify-center">
+          <Text className="text-gray-600 text-xs font-bold tracking-widest uppercase">Version 1.0.0</Text>
         </View>
       </ScrollView>
 
