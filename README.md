@@ -20,7 +20,12 @@ A beautifully designed, feature-rich React Native (Expo) application providing M
 - **📅 Islamic Features & Quick Actions:**
   - **Hijri Calendar Integration:** Displays the current Islamic date (auto-syncs daily).
   - **Ayat of the Day:** A curated verse on the main dashboard to keep the user inspired.
-  - Quick action links for Qibla Finder, Bookmarks, and Zakat calculation.
+  - **Notifications Hub:** A dedicated center for welcoming users and tracking challenge milestones.
+  - **Quick Actions:** Instant access to Qibla Finder, Bookmarks, and Zakat calculation.
+
+- **🎨 Premium UI & Experience:**
+  - **Custom Glassmorphic Alerts:** Replaced all native system alerts with a high-fidelity, themed `CustomAlert` component for a unified premium feel.
+  - **Adaptive Feedback:** Color-coded visual cues (Red/Yellow/Green) for errors, warnings, and success states within the custom modal system.
 
 - **📈 Profile & Goals Tracking:**
   - Gamified progression system tracking your "Quran Time", "Streaks", and "Verses Read" this week.
