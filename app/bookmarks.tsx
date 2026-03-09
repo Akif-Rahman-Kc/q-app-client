@@ -2,7 +2,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Stack, useFocusEffect, useRouter } from 'expo-router';
 import { Bookmark as BookmarkIcon, BookOpen, ChevronLeft, Trash2 } from 'lucide-react-native';
 import React, { useState } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, StatusBar, Text, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Pressable, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 import quranEnglish from '../assets/data/quran-en.json';
 import quranMalayalam from '../assets/data/quran-ml.json';
@@ -99,7 +99,7 @@ export default function BookmarksScreen() {
             colors={['#0a0f0a', '#0f1a14', '#0a0f0a']}
             style={{ flex: 1 }}
         >
-            <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
+            {/* <StatusBar barStyle="light-content" backgroundColor="transparent" translucent /> */}
 
             <Stack.Screen
                 options={{

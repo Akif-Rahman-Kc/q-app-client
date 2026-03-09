@@ -2,7 +2,7 @@
   {
     "number": 1,
     "name": "سُورَةُ ٱلْفَاتِحَةِ",
-    "englishName": "Al-Faatiha",
+    "englishName": "Al-Faatihah",
     "englishNameTranslation": "The Opening",
     "numberOfAyahs": 7,
     "revelationType": "Meccan"
@@ -10,7 +10,7 @@
   {
     "number": 2,
     "name": "سُورَةُ البَقَرَةِ",
-    "englishName": "Al-Baqara",
+    "englishName": "Al-Baqarah",
     "englishNameTranslation": "The Cow",
     "numberOfAyahs": 286,
     "revelationType": "Medinan"
@@ -34,7 +34,7 @@
   {
     "number": 5,
     "name": "سُورَةُ المَائـِدَةِ",
-    "englishName": "Al-Maaida",
+    "englishName": "Al-Maa'idah",
     "englishNameTranslation": "The Table",
     "numberOfAyahs": 120,
     "revelationType": "Medinan"
@@ -66,7 +66,7 @@
   {
     "number": 9,
     "name": "سُورَةُ التَّوۡبَةِ",
-    "englishName": "At-Tawba",
+    "englishName": "At-Tawbah",
     "englishNameTranslation": "The Repentance",
     "numberOfAyahs": 129,
     "revelationType": "Medinan"
@@ -250,7 +250,7 @@
   {
     "number": 32,
     "name": "سُورَةُ السَّجۡدَةِ",
-    "englishName": "As-Sajda",
+    "englishName": "As-Sajdah",
     "englishNameTranslation": "The Prostration",
     "numberOfAyahs": 30,
     "revelationType": "Meccan"
@@ -354,7 +354,7 @@
   {
     "number": 45,
     "name": "سُورَةُ الجَاثِيَةِ",
-    "englishName": "Al-Jaathiya",
+    "englishName": "Al-Jaathiyah",
     "englishNameTranslation": "Crouching",
     "numberOfAyahs": 37,
     "revelationType": "Meccan"
@@ -442,7 +442,7 @@
   {
     "number": 56,
     "name": "سُورَةُ الوَاقِعَةِ",
-    "englishName": "Al-Waaqia",
+    "englishName": "Al-Waaqi'ah",
     "englishNameTranslation": "The Inevitable",
     "numberOfAyahs": 96,
     "revelationType": "Meccan"
@@ -458,7 +458,7 @@
   {
     "number": 58,
     "name": "سُورَةُ المُجَادلَةِ",
-    "englishName": "Al-Mujaadila",
+    "englishName": "Al-Mujaadilah",
     "englishNameTranslation": "The Pleading Woman",
     "numberOfAyahs": 22,
     "revelationType": "Medinan"
@@ -474,7 +474,7 @@
   {
     "number": 60,
     "name": "سُورَةُ المُمۡتَحنَةِ",
-    "englishName": "Al-Mumtahana",
+    "englishName": "Al-Mumtahanah",
     "englishNameTranslation": "She that is to be examined",
     "numberOfAyahs": 13,
     "revelationType": "Medinan"
@@ -490,7 +490,7 @@
   {
     "number": 62,
     "name": "سُورَةُ الجُمُعَةِ",
-    "englishName": "Al-Jumu'a",
+    "englishName": "Al-Jumu'ah",
     "englishNameTranslation": "Friday",
     "numberOfAyahs": 11,
     "revelationType": "Medinan"
@@ -546,7 +546,7 @@
   {
     "number": 69,
     "name": "سُورَةُ الحَاقَّةِ",
-    "englishName": "Al-Haaqqa",
+    "englishName": "Al-Haaqqah",
     "englishNameTranslation": "The Reality",
     "numberOfAyahs": 52,
     "revelationType": "Meccan"
@@ -594,7 +594,7 @@
   {
     "number": 75,
     "name": "سُورَةُ القِيَامَةِ",
-    "englishName": "Al-Qiyaama",
+    "englishName": "Al-Qiyaamah",
     "englishNameTranslation": "The Resurrection",
     "numberOfAyahs": 40,
     "revelationType": "Meccan"
@@ -618,7 +618,7 @@
   {
     "number": 78,
     "name": "سُورَةُ النَّبَإِ",
-    "englishName": "An-Naba",
+    "englishName": "An-Naba'",
     "englishNameTranslation": "The Announcement",
     "numberOfAyahs": 40,
     "revelationType": "Meccan"
@@ -698,7 +698,7 @@
   {
     "number": 88,
     "name": "سُورَةُ الغَاشِيَةِ",
-    "englishName": "Al-Ghaashiya",
+    "englishName": "Al-Ghaashiyah",
     "englishNameTranslation": "The Overwhelming",
     "numberOfAyahs": 26,
     "revelationType": "Meccan"
@@ -738,7 +738,7 @@
   {
     "number": 93,
     "name": "سُورَةُ الضُّحَىٰ",
-    "englishName": "Ad-Dhuhaa",
+    "englishName": "Ad-Duha",
     "englishNameTranslation": "The Morning Hours",
     "numberOfAyahs": 11,
     "revelationType": "Meccan"
@@ -778,7 +778,7 @@
   {
     "number": 98,
     "name": "سُورَةُ البَيِّنَةِ",
-    "englishName": "Al-Bayyina",
+    "englishName": "Al-Bayyinah",
     "englishNameTranslation": "The Evidence",
     "numberOfAyahs": 8,
     "revelationType": "Medinan"
@@ -802,7 +802,7 @@
   {
     "number": 101,
     "name": "سُورَةُ القَارِعَةِ",
-    "englishName": "Al-Qaari'a",
+    "englishName": "Al-Qaari'ah",
     "englishNameTranslation": "The Calamity",
     "numberOfAyahs": 11,
     "revelationType": "Meccan"
@@ -826,7 +826,7 @@
   {
     "number": 104,
     "name": "سُورَةُ الهُمَزَةِ",
-    "englishName": "Al-Humaza",
+    "englishName": "Al-Humazah",
     "englishNameTranslation": "The Traducer",
     "numberOfAyahs": 9,
     "revelationType": "Meccan"

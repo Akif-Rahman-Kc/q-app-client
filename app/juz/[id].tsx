@@ -2,7 +2,7 @@ import CustomAlert from '@/components/CustomAlert';
 import { Stack, useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { Bookmark, ChevronLeft, Moon, Share2, Sun } from 'lucide-react-native';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, AppState, Pressable, ScrollView, Share, StatusBar, Text, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, AppState, Pressable, ScrollView, Share, Text, TouchableOpacity, View } from 'react-native';
 
 // Imported offline full Quran text
 import quranEnglish from '../../assets/data/quran-en.json';
@@ -298,7 +298,7 @@ export default function JuzScreen() {
 
     return (
         <View className="flex-1 pt-7 bg-[#050f05]">
-            <StatusBar barStyle="light-content" />
+            {/* <StatusBar barStyle="light-content" /> */}
 
             <Stack.Screen
                 options={{

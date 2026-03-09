@@ -2,8 +2,11 @@ import { Tabs } from 'expo-router';
 import { Book, Clock, Heart, Home, User } from 'lucide-react-native';
 import React from 'react';
 import { Platform } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function TabLayout() {
+  const insets = useSafeAreaInsets();
+
   return (
     <Tabs
       screenOptions={{
@@ -14,16 +17,16 @@ export default function TabLayout() {
           backgroundColor: '#0a0f0a',
           borderTopWidth: 1,
           borderTopColor: '#1a241a',
-          height: Platform.OS === 'ios' ? 90 : 70,
-          paddingBottom: Platform.OS === 'ios' ? 30 : 12,
-          paddingTop: 8,
-          elevation: 0, // remove exact android shadow
-          shadowOpacity: 0, // remove exact ios shadow
+          height: Platform.OS === 'ios' ? 88 + insets.bottom : 70 + (insets.bottom > 0 ? insets.bottom - 10 : 0),
+          paddingBottom: Platform.OS === 'ios' ? insets.bottom : Math.max(insets.bottom, 12),
+          paddingTop: 12,
+          elevation: 0,
+          shadowOpacity: 0,
         },
         tabBarLabelStyle: {
-          fontSize: 10,
+          fontSize: 11,
           fontWeight: '700',
-          marginTop: 4,
+          marginBottom: Platform.OS === 'ios' ? 0 : 4,
         },
       }}>
       <Tabs.Screen

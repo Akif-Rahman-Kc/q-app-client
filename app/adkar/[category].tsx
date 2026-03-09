@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { ArrowLeft, Star } from 'lucide-react-native';
 import React, { useState } from 'react';
-import { Pressable, ScrollView, StatusBar, Text, View } from 'react-native';
+import { Pressable, ScrollView, Text, View } from 'react-native';
 
 type Adkar = {
     id: number;
@@ -19,6 +19,8 @@ type Adkar = {
     en_benefit?: string;
     ml_benefit?: string;
     benefit?: string;
+    heading_en?: string;
+    heading_ml?: string;
 };
 
 const CATEGORY_META: Record<string, {
@@ -209,10 +211,10 @@ export default function CategoryScreen() {
 
     return (
         <LinearGradient colors={meta.gradientColors} style={{ flex: 1 }}>
-            <StatusBar barStyle="light-content" />
+            {/* <StatusBar barStyle="light-content" /> */}
 
             {/* Header */}
-            <View style={{ paddingTop: 52, paddingHorizontal: 20, paddingBottom: 16 }}>
+            <View style={{ paddingTop: 40, paddingHorizontal: 20, paddingBottom: 16 }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 20 }}>
                     <Pressable
                         onPress={() => router.back()}
@@ -300,6 +302,15 @@ export default function CategoryScreen() {
                                 <Star size={22} color={favorites.has(adkar.id) ? "#facc15" : "#4b5563"} fill={favorites.has(adkar.id) ? "#facc15" : "transparent"} />
                             </Pressable>
                         </View>
+
+                        {/* Heading */}
+                        {(translationLanguage === 'ml' ? adkar.heading_ml : adkar.heading_en) && (
+                            <View style={{ paddingHorizontal: 20, paddingTop: 4 }}>
+                                <Text style={{ color: meta.accentColor, fontSize: 13, fontWeight: '800', textTransform: 'uppercase', letterSpacing: 1 }}>
+                                    {translationLanguage === 'ml' ? adkar.heading_ml : adkar.heading_en}
+                                </Text>
+                            </View>
+                        )}
 
                         {/* Arabic Text */}
                         <View style={{ paddingHorizontal: 20, paddingBottom: 16, paddingTop: 4 }}>

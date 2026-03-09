@@ -9,8 +9,10 @@
       "ml_translation": "ഞങ്ങൾ പ്രഭാതമായിരിക്കുന്നു, ആധിപത്യം അല്ലാഹുവിനാണ്. സർവ്വ സ്തുതിയും അല്ലാഹുവിനാണ്. അല്ലാഹുവല്ലാതെ മറ്റൊരു ആരാധ്യനില്ല, അവൻ ഏകനാണ്, അവന് പങ്കുകാരില്ല. ആധിപത്യവും സ്തുതിയും അവനാണ്, അവൻ എല്ലാ കാര്യത്തിനും കഴിവുള്ളവനാണ്. എന്റെ റബ്ബേ! ഈ ദിവസത്തെ നന്മയും ഇതിന് ശേഷമുള്ള നന്മയും ഞാൻ നിന്നോട് ചോദിക്കുന്നു. ഈ ദിവസത്തെ തിന്മയിൽ നിന്നും ഇതിന് ശേഷമുള്ള തിന്മയിൽ നിന്നും ഞാൻ നിന്നിൽ ശരണം തേടുന്നു. എന്റെ റബ്ബേ! അലസതയിൽ നിന്നും മോശമായ വാർദ്ധക്യത്തിൽ നിന്നും ഞാൻ നിന്നിൽ ശരണം തേടുന്നു. നരകത്തിലെ ശിക്ഷയിൽ നിന്നും ഖബറിലെ ശിക്ഷയിൽ നിന്നും ഞാൻ നിന്നിൽ ശരണം തേടുന്നു.",
       "reference": "Muslim 4/2088",
       "repeat": 1,
-      "en_benefit": "A comprehensive morning supplication for protection and goodness",
-      "ml_benefit": "രാവിലെ ചൊല്ലേണ്ട പ്രധാന ദിക്ർ"
+      "en_benefit": "Protection from the evil of the day and its aftermath, and seeking refuge from laziness and punishment.",
+      "ml_benefit": "ഈ ദിവസത്തെയും ഇതിന് ശേഷമുള്ളതുമായ തിന്മകളിൽ നിന്നും അലസതയിൽ നിന്നും സംരക്ഷണം ലഭിക്കുന്നു.",
+      "heading_en": "Morning Supplication for Protection",
+      "heading_ml": "രാവിലെ ചൊല്ലേണ്ട പ്രധാന ദിക്ർ"
     },
     {
       "id": 2,
@@ -21,8 +23,10 @@
       "ml_translation": "അല്ലാഹുവേ! നിന്നാൽ ഞങ്ങൾ പ്രഭാതമടഞ്ഞു, നിന്നാൽ ഞങ്ങൾ സന്ധ്യയടഞ്ഞു, നിന്നാൽ ഞങ്ങൾ ജീവിക്കുന്നു, നിന്നാൽ ഞങ്ങൾ മരിക്കുന്നു. നിന്നിലേക്കാണ് ഉയിർത്തെഴുന്നേൽപ്പ്.",
       "reference": "At-Tirmidhi 5/466",
       "repeat": 1,
-      "en_benefit": "Morning remembrance of life, death and resurrection",
-      "ml_benefit": "പ്രഭാത പ്രാർത്ഥന"
+      "en_benefit": "Remembrance of the Giver of life and death, reinforcing faith at the start of the day.",
+      "ml_benefit": "ജീവിതത്തെയും മരണത്തെയും കുറിച്ച് ഓർമ്മിപ്പിക്കുകയും ഈമാൻ വർദ്ധിപ്പിക്കുകയും ചെയ്യുന്നു.",
+      "heading_en": "Morning Remembrance",
+      "heading_ml": "പ്രഭാത പ്രാർത്ഥന"
     },
     {
       "id": 3,
@@ -33,8 +37,10 @@
       "ml_translation": "അല്ലാഹുവേ! നീ എന്റെ റബ്ബാണ്. നിനക്കല്ലാതെ ആരാധ്യനില്ല. നീ എന്നെ സൃഷ്ടിച്ചു, ഞാൻ നിന്റെ അടിമയാണ്. ഞാൻ ശക്ത്യനുസരണം നിന്റെ കരാറിലും വാഗ്ദാനത്തിലുമാണ്. ഞാൻ ചെയ്ത തിന്മകളിൽ നിന്ന് ഞാൻ നിന്നിൽ ശരണം തേടുന്നു. നിന്റെ അനുഗ്രഹങ്ങൾ ഞാൻ ഏറ്റുപറയുന്നു, എന്റെ പാപങ്ങൾ ഞാൻ സമ്മതിക്കുന്നു. അതിനാൽ എനിക്ക് പൊറുത്തുതരേണമേ. നീയല്ലാതെ പാപങ്ങൾ പൊറുക്കുന്നവൻ മറ്റാരുമില്ല.",
       "reference": "Al-Bukhari 7/150",
       "repeat": 1,
-      "en_benefit": "Sayyid al-Istigfar (The Master of Forgiveness). Whoever says this with conviction in the morning and dies before evening will be among the people of Paradise.",
-      "ml_benefit": "സയ്യിദുൽ ഇസ്തിഗ്ഫാർ - രാവിലെ ചൊല്ലി അന്ന് മരിച്ചാൽ സ്വർഗ്ഗത്തിൽ പ്രവേശിക്കും"
+      "en_benefit": "Whoever says this with conviction in the morning and dies before evening will be among the people of Paradise.",
+      "ml_benefit": "രാവിലെ ഇത് ചൊല്ലി ആ വൈകുന്നേരത്തിന് മുമ്പ് മരണപ്പെട്ടാൽ അയാൾ വിശ്വസിച്ചവനായിരുന്നാൽ സ്വർഗ്ഗത്തിൽ പ്രവേശിക്കും.",
+      "heading_en": "Sayyid al-Istigfar (The Master of Forgiveness)",
+      "heading_ml": "സയ്യിദുൽ ഇസ്തിഗ്ഫാർ"
     },
     {
       "id": 4,
@@ -45,8 +51,10 @@
       "ml_translation": "അല്ലാഹുവേ! ഞാൻ പ്രഭാതമടഞ്ഞു, നിന്നെയും നിന്റെ അർശ് വഹിക്കുന്നവരെയും നിന്റെ മലക്കുകളെയും നിന്റെ സർവ്വ സൃഷ്ടികളെയും ഞാൻ സാക്ഷ്യം വഹിക്കുന്നു - നീ മാത്രമാണ് അല്ലാഹു, നിനക്കല്ലാതെ ആരാധ്യനില്ല, നീ ഏകനാണ്, നിനക്ക് പങ്കുകാരില്ല. മുഹമ്മദ് നബി ﷺ നിന്റെ അടിമയും റസൂലുമാണ്.",
       "reference": "Abu Dawud 4/317",
       "repeat": 4,
-      "en_benefit": "Whoever says this 4 times in the morning, Allah will protect him from Hellfire",
-      "ml_benefit": "നാല് തവണ ചൊല്ലിയാൽ നരകത്തിൽ നിന്ന് മോചനം"
+      "en_benefit": "Whoever says this 4 times in the morning, Allah will protect him from Hellfire.",
+      "ml_benefit": "നാല് തവണ ചൊല്ലിയാൽ അല്ലാഹു അവനെ നരകത്തിൽ നിന്ന് മോചിപ്പിക്കും.",
+      "heading_en": "Protection from Hellfire (Repeat 4 times)",
+      "heading_ml": "നരകത്തിൽ നിന്ന് കാവൽ ലഭിക്കാൻ (4 തവണ)"
     },
     {
       "id": 5,
@@ -57,8 +65,10 @@
       "ml_translation": "അല്ലാഹുവേ! ഈ പ്രഭാതത്തിൽ എന്റെയോ നിന്റെ ഏതെങ്കിലും സൃഷ്ടിയുടെയോ മേൽ ലഭിക്കുന്ന ഓരോ അനുഗ്രഹവും നിന്നിൽ നിന്ന് മാത്രമാണ്. നിനക്ക് പങ്കുകാരില്ല. നിനക്ക് സർവ്വ സ്തുതിയും നന്ദിയും.",
       "reference": "Abu Dawud 4/318",
       "repeat": 1,
-      "en_benefit": "Whoever says this in the morning has offered his day's thanks",
-      "ml_benefit": "ആ ദിവസത്തെ നന്ദി പ്രകാശനം"
+      "en_benefit": "Whoever says this in the morning has offered his day's thanks.",
+      "ml_benefit": "രാവിലെ ഇത് ചൊല്ലിയാൽ അന്നത്തെ നന്ദി പ്രകാശനം പൂർത്തിയായി.",
+      "heading_en": "Morning Gratitude",
+      "heading_ml": "പ്രഭാതത്തിലെ നന്ദി പ്രകാശനം"
     },
     {
       "id": 6,
@@ -70,7 +80,9 @@
       "reference": "Abu Dawud 4/321",
       "repeat": 7,
       "en_benefit": "Allah will grant whoever says this seven times in the morning or evening whatever he desires from this world or the next.",
-      "ml_benefit": "ஏഴ് തവണ ചൊല്ലിയാൽ ആ ദിവസത്തെ എല്ലാ പ്രയാസങ്ങൾക്കും അല്ലാഹു മതിയാകും"
+      "ml_benefit": "രാവിലെയോ വൈകുന്നേരമോ ഏഴ് തവണ ഇത് ചൊല്ലിയാൽ ഇഹലോകത്തെയും പരലോകത്തെയും പ്രയാസങ്ങളിൽ അല്ലാഹു അവർക്ക് മതിയാകുന്നതാണ്.",
+      "heading_en": "Trust in Allah (Repeat 7 times)",
+      "heading_ml": "അല്ലാഹുവിൽ ഭരമേൽപ്പിക്കുമ്പോൾ (7 തവണ)"
     },
     {
       "id": 7,
@@ -82,7 +94,9 @@
       "reference": "Abu Dawud 4/323",
       "repeat": 3,
       "en_benefit": "Whoever says this three times in the morning will not be afflicted by any calamity until evening, and whoever says it in the evening will not be afflicted until morning.",
-      "ml_benefit": "മൂന്ന് തവണ ചൊല്ലിയാൽ വൈകുന്നേരം വരെ ഒന്നും ഉപദ്രവിക്കില്ല"
+      "ml_benefit": "രാവിലെ ഇത് മൂന്ന് തവണ ചൊല്ലിയാൽ വൈകുന്നേരം വരെയും വൈകുന്നേരം ചൊല്ലിയാൽ രാവിലെ വരെയും യാതൊരു വിപത്തും അവരെ ബാധിക്കുകയില്ല.",
+      "heading_en": "Protection from All Harms (Repeat 3 times)",
+      "heading_ml": "വിപത്തുകളിൽ നിന്ന് കാവൽ ലഭിക്കാൻ (3 തവണ)"
     },
     {
       "id": 8,
@@ -93,8 +107,10 @@
       "ml_translation": "അല്ലാഹുവേ! എന്റെ ശരീരത്തിന് എനിക്ക് ആരോഗ്യം നൽകേണമേ. എന്റെ കേൾവിക്കും കാഴ്ചയ്ക്കും എനിക്ക് ആരോഗ്യം നൽകേണമേ. നീയല്ലാതെ മറ്റൊരു ആരാധ്യനില്ല. അല്ലാഹുവേ! അവിശ്വാസത്തിൽ നിന്നും ദാരിദ്ര്യത്തിൽ നിന്നും ഖബർ ശിക്ഷയിൽ നിന്നും ഞാൻ നിന്നോട് കാവൽ തേടുന്നു. നീയല്ലാതെ മറ്റൊരു ആരാധ്യനില്ല.",
       "reference": "Abu Dawud 4/324",
       "repeat": 3,
-      "en_benefit": "Supplication for health and protection from disbelief, poverty, and the punishment of the grave",
-      "ml_benefit": "ആരോഗ്യത്തിനും സംരക്ഷണത്തിനും"
+      "en_benefit": "Seeking health for the body, hearing, and sight, and refuge from disbelief, poverty, and grave punishment.",
+      "ml_benefit": "ശരീരത്തിനും കേൾവിക്കും കാഴ്ചക്കും ആരോഗ്യവും, അവിശ്വാസത്തിൽ നിന്നും ദാരിദ്ര്യത്തിൽ നിന്നും ഖബർ ശിക്ഷയിൽ നിന്നും മോചനവും ലഭിക്കാൻ.",
+      "heading_en": "Supplication for Health and Wellbeing (Repeat 3 times)",
+      "heading_ml": "ആരോഗ്യത്തിനും സംരക്ഷണത്തിനും (3 തവണ)"
     },
     {
       "id": 9,
@@ -106,7 +122,9 @@
       "reference": "Abu Dawud 4/318",
       "repeat": 3,
       "en_benefit": "Allah has promised that whoever says this three times every morning or evening will be pleased on the Day of Resurrection.",
-      "ml_benefit": "അല്ലാഹുവിന്റെ തൃപ്തി ലഭിക്കാൻ"
+      "ml_benefit": "രാവിലെയോ വൈകുന്നേരമോ ഇത് മൂന്ന് തവണ ചൊല്ലിയാൽ അന്ത്യനാളിൽ അവരെ തൃപ്തിപ്പെടുത്തുമെന്ന് അല്ലാഹു കരാർ ചെയ്തിട്ടുണ്ട്.",
+      "heading_en": "Being Pleased with Allah (Repeat 3 times)",
+      "heading_ml": "അല്ലാഹുവിന്റെ തൃപ്തി ലഭിക്കാൻ (3 തവണ)"
     },
     {
       "id": 10,
@@ -117,8 +135,10 @@
       "ml_translation": "അല്ലാഹുവേ! എന്നെന്നും ജീവിച്ചിരിക്കുന്നവനേ, സർവ്വ നിയന്താവേ, നിന്റെ കാരുണ്യം കൊണ്ട് ഞാൻ സഹായം തേടുന്നു. എന്റെ എല്ലാ കാര്യങ്ങളും എനിക്ക് നന്നാക്കിത്തരേണമേ, ഒരു കണ്ണിമ വെട്ടുന്ന നേരം പോലും എന്നെ എന്നിലേക്ക് തന്നെ ഏൽപ്പിക്കരുതേ.",
       "reference": "Al-Hakim 1/545",
       "repeat": 1,
-      "en_benefit": "Entrusting all affairs to Allah and seeking His rectification",
-      "ml_benefit": "ദൈനദിന കാര്യങ്ങൾ നന്നാകാൻ"
+      "en_benefit": "Seeking Allah's mercy and help to rectify all affairs and not being left to oneself.",
+      "ml_benefit": "എല്ലാ കാര്യങ്ങളും നന്നാകാനും അല്ലാഹുവിന്റെ സഹായം ലഭിക്കാനും കണ്ണിമവെട്ടുന്ന നേരം പോലും നമ്മെ നമ്മിലേക്ക് ഏൽപ്പിക്കാതിരിക്കാനും.",
+      "heading_en": "Seeking Help from the Ever-Living",
+      "heading_ml": "ദൈനദിന കാര്യങ്ങൾ നന്നാകാൻ"
     },
     {
       "id": 11,
@@ -129,8 +149,10 @@
       "ml_translation": "ഇസ്‌ലാമിൻ്റെ സഹജ പ്രകൃതിയിലും ഏകാത്മക വചനത്തിലുമാണ് ഞങ്ങൾ പ്രഭാതമടഞ്ഞത്. ഞങ്ങളുടെ പ്രവാചകൻ മുഹമ്മദ് നബി ﷺ യുടെ ദീനിലാണുള്ളത്. ഏകദൈവ വിശ്വാസിയും സത്യവഴിയേ ചരിക്കുന്ന മുസ്‌ലിമുമായ ഞങ്ങളുടെ പിതാവ് ഇബ്രാഹീം നബിയുടെ മാർഗ്ഗത്തിലുമാണ് ഞങ്ങൾ പ്രഭാതമടഞ്ഞത്. അദ്ദേഹം ഒരു ബഹുദൈവ വിശ്വാസിയായിരുന്നില്ല.",
       "reference": "Ahmad 3/406",
       "repeat": 1,
-      "en_benefit": "Affirming faith and adhering to the path of Ibrahim (AS)",
-      "ml_benefit": "ദീനിലുള്ള ഉറപ്പ്"
+      "en_benefit": "Affirming adherence to Islam and the path of the Prophet Muhammad ﷺ and Ibrahim AS.",
+      "ml_benefit": "ഇസ്ലാമിലും തൗഹീദിലും ഉറച്ചു നിൽക്കാനും പ്രവാചക ചര്യകൾ പിന്തുടരാനും.",
+      "heading_en": "Affirming the Natural Disposition (Fitrah)",
+      "heading_ml": "ദീനിലുള്ള ഉറപ്പ്"
     },
     {
       "id": 12,
@@ -141,8 +163,10 @@
       "ml_translation": "അല്ലാഹുവിനെ ഞാൻ സ്തുതിക്കുന്നതോടൊപ്പം അവന്റെ പരിശുദ്ധിയെ പുകഴ്ത്തുകയും ചെയ്യുന്നു.",
       "reference": "Muslim 4/2071",
       "repeat": 100,
-      "en_benefit": "Whoever says this one hundred times in the morning and evening, none will come on the Day of Resurrection with anything better except one who has said the same or more.",
-      "ml_benefit": "നൂറ് തവണ ചൊല്ലിയാൽ സർവ്വ പാപങ്ങളും പൊറുക്കപ്പെടും"
+      "en_benefit": "Whoever says this 100 times in the morning and evening, none will come on the Day of Resurrection with anything better except one who has said the same or more.",
+      "ml_benefit": "രാവിലെയോ വൈകുന്നേരമോ ഇത് നൂറ് തവണ ചൊല്ലിയാൽ അന്ത്യനാളിൽ അവനേക്കാൾ ഉത്തമനായി ആരും വരികയില്ല.",
+      "heading_en": "Glorification of Allah (Repeat 100 times)",
+      "heading_ml": "പരിശുദ്ധിയെ പ്രകീർത്തിക്കാൻ (100 തവണ)"
     },
     {
       "id": 13,
@@ -154,7 +178,9 @@
       "reference": "Muslim 4/2071",
       "repeat": 10,
       "en_benefit": "Allah will write for him ten good deeds, erase ten evil deeds, and raise him ten degrees in status.",
-      "ml_benefit": "പത്ത് തവണയോ നൂറ് തവണയോ ചൊല്ലുക"
+      "ml_benefit": "പത്ത് നന്മകൾ ലഭിക്കാനും പത്ത് പാപങ്ങൾ പൊറുക്കാനും പത്ത് പദവികൾ ഉയർത്താനും ഇത് സഹായിക്കുന്നു.",
+      "heading_en": "Affirming Allah's Oneness (Repeat 10 or 100 times)",
+      "heading_ml": "തൗഹീദ് പ്രഖ്യാപനം (10 അല്ലെങ്കിൽ 100 തവണ)"
     },
     {
       "id": 14,
@@ -166,21 +192,25 @@
       "reference": "Abu Dawud 5074",
       "repeat": 1,
       "en_benefit": "A comprehensive prayer for protection of life, religion, family and wealth.",
-      "ml_benefit": "സമഗ്രമായ സംരക്ഷണത്തിന്"
+      "ml_benefit": "മുന്നിൽ നിന്നും പിന്നിൽ നിന്നും എല്ലാ ഭാഗങ്ങളിൽ നിന്നുമുള്ള സംരക്ഷണത്തിനായി.",
+      "heading_en": "Comprehensive Prayer for Protection",
+      "heading_ml": "സമഗ്രമായ സംരക്ഷണത്തിന്"
     }
   ],
   "masa": [
     {
       "id": 1,
-      "arabic": "أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَـهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ، وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ",
+      "arabic": "أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَـهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَسْأَلُكَ مِنَ الْكَسَلِ، وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ",
       "en_transliteration": "Amsayna wa amsal-mulku lillahi wal-hamdu lillahi, la ilaha illallahu wahdahu la sharika lahu, lahul-mulku walahul-hamdu wahuwa 'ala kulli shay'in qadir. Rabbi as'aluka khayra ma fi hadhihil-laylati wa khayra ma ba'daha, wa a'udhu bika min sharri ma fi hadhihil-laylati wa sharri ma ba'daha. Rabbi a'udhu bika minal-kasali wa su'il-kibar, Rabbi a'udhu bika min 'adhabin fin-nari wa 'adhabin fil-qabr.",
       "ml_transliteration": "അംസൈനാ വ അംസൽ മുൽകു ലില്ലാഹ്, വൽഹംദു ലില്ലാഹ്, ലാ ഇലാഹ ഇല്ലല്ലാഹു വഹ്ദഹു ലാ ശരീക ലഹു, ലഹുൽ മുൽകു വലഹുൽ ഹംദു വഹുവ അലാ കുല്ലി ശൈഇൻ ഖദീർ. റബ്ബീ അസ്അലുക ഖൈറ മാ ഫീ ഹാദിഹിൽ ലൈലത്തി വഖൈറ മാ ബഅ്ദഹാ, വഅഊദു ബിക മിൻ ശർറി മാ ഫീ ഹാദിഹിൽ ലൈലത്തി വശർറി മാ ബഅ്ദഹാ. റബ്ബീ അഊദു ബിക മിനൽ കസലി വസൂഇൽ കിബർ, റബ്ബീ അഊദു ബിക മിൻ അദാബിൻ ഫിന്നാരി വഅദാബിൻ ഫിൽ ഖബർ.",
       "en_translation": "We have reached the evening and at this very time all sovereignty belongs to Allah, and all praise is for Allah. None has the right to be worshipped except Allah, alone, without any partner. To Him belongs all sovereignty and praise, and He is over all things omnipotent. My Lord, I ask You for the good of this night and the good of what follows it, and I seek refuge in You from the evil of this night and the evil of what follows it. My Lord, I seek refuge in You from laziness and senility. My Lord, I seek refuge in You from torment in the Fire and torment in the grave.",
       "ml_translation": "ഞങ്ങൾ വൈകുന്നേരമായിരിക്കുന്നു, ആധിപത്യം അല്ലാഹുവിനാണ്. സർവ്വ സ്തുതിയും അല്ലാഹുവിനാണ്. അല്ലാഹുവല്ലാതെ മറ്റൊരു ആരാധ്യനില്ല, അവൻ ഏകനാണ്, അവന് പങ്കുകാരില്ല. ആധിപത്യവും സ്തുതിയും അവനാണ്, അവൻ എല്ലാ കാര്യത്തിനും കഴിവുള്ളവനാണ്. എന്റെ റബ്ബേ! ഈ രാത്രിയിലെ നന്മയും ഇതിന് ശേഷമുള്ള നന്മയും ഞാൻ നിന്നോട് ചോദിക്കുന്നു. ഈ രാത്രിയിലെ തിന്മയിൽ നിന്നും ഇതിന് ശേഷമുള്ള തിന്മയിൽ നിന്നും ഞാൻ നിന്നിൽ ശരണം തേടുന്നു. എന്റെ റബ്ബേ! അലസതയിൽ നിന്നും മോശമായ വാർദ്ധക്യത്തിൽ നിന്നും ഞാൻ നിന്നിൽ ശരണം തേടുന്നു. നരകത്തിലെ ശിക്ഷയിൽ നിന്നും ഖബറിലെ ശിക്ഷയിൽ നിന്നും ഞാൻ നിന്നിൽ ശരണം തേടുന്നു.",
       "reference": "Muslim 4/2088",
       "repeat": 1,
-      "en_benefit": "A comprehensive evening supplication for protection and goodness",
-      "ml_benefit": "സന്ധ്യ നേരത്തെ ദിക്ർ"
+      "en_benefit": "Protection from the evil of the night and its aftermath, and seeking refuge from laziness and punishment.",
+      "ml_benefit": "ഈ രാത്രിയിലെയും ഇതിന് ശേഷമുള്ളതുമായ തിന്മകളിൽ നിന്നും അലസതയിൽ നിന്നും സംരക്ഷണം ലഭിക്കുന്നു.",
+      "heading_en": "Evening Supplication for Protection",
+      "heading_ml": "വൈകുന്നേരം ചൊല്ലേണ്ട പ്രധാന ദിക്ർ"
     },
     {
       "id": 2,
@@ -191,8 +221,10 @@
       "ml_translation": "അല്ലാഹുവേ! നിന്നാൽ ഞങ്ങൾ സന്ധ്യയടഞ്ഞു, നിന്നാൽ ഞങ്ങൾ പ്രഭാതമടഞ്ഞു, നിന്നാൽ ഞങ്ങൾ ജീവിക്കുന്നു, നിന്നാൽ ഞങ്ങൾ മരിക്കുന്നു. നിന്നിലേക്കാണ് മടക്കം.",
       "reference": "At-Tirmidhi 5/466",
       "repeat": 1,
-      "en_benefit": "Evening remembrance of life, death and return to Allah",
-      "ml_benefit": "വൈകുന്നേരത്തെ പ്രാർത്ഥന"
+      "en_benefit": "Remembrance of the Giver of life and death, reinforcing faith at the close of the day.",
+      "ml_benefit": "ജീവിതത്തെയും മരണത്തെയും കുറിച്ച് ഓർമ്മിപ്പിക്കുകയും ഈമാൻ വർദ്ധിപ്പിക്കുകയും ചെയ്യുന്നു.",
+      "heading_en": "Evening Remembrance",
+      "heading_ml": "വൈകുന്നേരത്തെ പ്രാർത്ഥന"
     },
     {
       "id": 3,
@@ -203,20 +235,24 @@
       "ml_translation": "അല്ലാഹുവേ! നീ എന്റെ റബ്ബാണ്. നിനക്കല്ലാതെ ആരാധ്യനില്ല. നീ എന്നെ സൃഷ്ടിച്ചു, ഞാൻ നിന്റെ അടിമയാണ്. ഞാൻ ശക്ത്യനുസരണം നിന്റെ കരാറിലും വാഗ്ദാനത്തിലുമാണ്. ഞാൻ ചെയ്ത തിന്മകളിൽ നിന്ന് ഞാൻ നിന്നിൽ ശരണം തേടുന്നു. നിന്റെ അനുഗ്രഹങ്ങൾ ഞാൻ ഏറ്റുപറയുന്നു, എന്റെ പാപങ്ങൾ ഞാൻ സമ്മതിക്കുന്നു. അതിനാൽ എനിക്ക് പൊറുത്തുതരേണമേ. നീയല്ലാതെ പാപങ്ങൾ പൊറുക്കുന്നവൻ മറ്റാരുമില്ല.",
       "reference": "Al-Bukhari 7/150",
       "repeat": 1,
-      "en_benefit": "Sayyid al-Istigfar (The Master of Forgiveness). Whoever says this with conviction in the evening and dies before morning will be among the people of Paradise.",
-      "ml_benefit": "സയ്യിദുൽ ഇസ്തിഗ്ഫാർ - വൈകുന്നേരം ചൊല്ലി അന്ന് രാത്രി മരിച്ചാൽ സ്വർഗ്ഗത്തിൽ പ്രവേശിക്കും"
+      "en_benefit": "Whoever says this with conviction in the evening and dies before morning will be among the people of Paradise.",
+      "ml_benefit": "വൈകുന്നേരം ഇത് ചൊല്ലി ആ പ്രഭാതത്തിന് മുമ്പ് മരണപ്പെട്ടാൽ അയാൾ വിശ്വസിച്ചവനായിരുന്നാൽ സ്വർഗ്ഗത്തിൽ പ്രവേശിക്കും.",
+      "heading_en": "Sayyid al-Istigfar (The Master of Forgiveness)",
+      "heading_ml": "സയ്യിദുൽ ഇസ്തിഗ്ഫാർ"
     },
     {
       "id": 4,
       "arabic": "اللَّهُمَّ إِنِّي أَمْسَيْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ وَمَلاَئِكَتَكَ وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللهُ لاَ إِلَـهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ",
       "en_transliteration": "Allahumma inni amsaytu ushhiduka wa ushhidu hamalata 'arshika, wa mala'ikataka wa jami'a khalqika, annaka Antallahu la ilaha illa Anta wahdaka la sharika laka, wa anna Muhammadan 'abduka wa Rasuluka.",
-      "ml_transliteration": "അല്ലാഹുമ്മ ഇന്നី അംസൈത്തു ഉശ്ഹിദുക വ ഉശ്ഹിദു ഹമലത്ത അർശിക വ മലായിക്കത്തക്ക വ ജമീഅ ഖൽഖിക അന്നക അന്തല്ലാഹു ലാ ഇലാഹ ഇല്ലാ അന്ത വഹ്ദക ലാ ശരീക ലക വ അന്ന മുഹമ്മദൻ അബ്ദുക വറസൂലുക",
+      "ml_transliteration": "അല്ലാഹുമ്മ ഇന്നീ അംസൈത്തു ഉശ്ഹിദുക വ ഉശ്ഹിദു ഹമലത്ത അർശിക വ മലായിക്കത്തക്ക വ ജമീഅ ഖൽഖിക അന്നക അന്തല്ലാഹു ലാ ഇലാഹ ഇല്ലാ അന്ത വഹ്ദക ലാ ശരീക ലക വ അന്ന മുഹമ്മദൻ അബ്ദുക വറസൂലുക",
       "en_translation": "O Allah, I have reached the evening and call upon You, the bearers of Your Throne, Your angels and all of Your creation to witness that You are Allah, none has the right to be worshipped except You, alone, without partner and that Muhammad is Your Servant and Messenger.",
       "ml_translation": "അല്ലാഹുവേ! ഞാൻ സന്ധ്യയടഞ്ഞു, നിന്നെയും നിന്റെ അർശ് വഹിക്കുന്നവരെയും നിന്റെ മലക്കുകളെയും നിന്റെ സർവ്വ സൃഷ്ടികളെയും ഞാൻ സാക്ഷ്യം വഹിക്കുന്നു - നീ മാത്രമാണ് അല്ലാഹു, നിനക്കല്ലാതെ ആരാധ്യനില്ല, നീ ഏകനാണ്, നിനക്ക് പങ്കുകാരില്ല. മുഹമ്മദ് നബി ﷺ നിന്റെ അടിമയും റസൂലുമാണ്.",
       "reference": "Abu Dawud 4/317",
       "repeat": 4,
-      "en_benefit": "Whoever says this 4 times in the evening, Allah will protect him from Hellfire",
-      "ml_benefit": "നാല് തവണ ചൊല്ലിയാൽ നരകത്തിൽ നിന്ന് മോചനം"
+      "en_benefit": "Whoever says this 4 times in the evening, Allah will protect him from Hellfire.",
+      "ml_benefit": "നാല് തവണ ചൊല്ലിയാൽ അല്ലാഹു അവനെ നരകത്തിൽ നിന്ന് മോചിപ്പിക്കും.",
+      "heading_en": "Protection from Hellfire (Repeat 4 times)",
+      "heading_ml": "നരകത്തിൽ നിന്ന് കാവൽ ലഭിക്കാൻ (4 തവണ)"
     },
     {
       "id": 5,
@@ -227,8 +263,10 @@
       "ml_translation": "അല്ലാഹുവേ! ഈ സന്ധ്യയിൽ എന്റെയോ നിന്റെ ഏതെങ്കിലും സൃഷ്ടിയുടെയോ മേൽ ലഭിക്കുന്ന ഓരോ അനുഗ്രഹവും നിന്നിൽ നിന്ന് മാത്രമാണ്. നിനക്ക് പങ്കുകാരില്ല. നിനക്ക് സർവ്വ സ്തുതിയും നന്ദിയും.",
       "reference": "Abu Dawud 4/318",
       "repeat": 1,
-      "en_benefit": "Whoever says this in the evening has offered his night's thanks",
-      "ml_benefit": "രാത്രിയിലെ നന്ദി പ്രകാശനം"
+      "en_benefit": "Whoever says this in the evening has offered his night's thanks.",
+      "ml_benefit": "സന്ധ്യക്ക് ഇത് ചൊല്ലിയാൽ അന്നത്തെ രാത്രിയിലെ നന്ദി പ്രകാശനം പൂർത്തിയായി.",
+      "heading_en": "Evening Gratitude",
+      "heading_ml": "സന്ധ്യാ സമയത്തെ നന്ദി പ്രകാശനം"
     },
     {
       "id": 6,
@@ -240,19 +278,23 @@
       "reference": "Abu Dawud 4/321",
       "repeat": 7,
       "en_benefit": "Allah will grant whoever says this seven times in the morning or evening whatever he desires from this world or the next.",
-      "ml_benefit": "ഏഴ് തവണ"
+      "ml_benefit": "രാവിലെയോ വൈകുന്നേരമോ ഏഴ് തവണ ഇത് ചൊല്ലിയാൽ ഇഹലോകത്തെയും പരലോകത്തെയും പ്രയാസങ്ങളിൽ അല്ലാഹു അവർക്ക് മതിയാകുന്നതാണ്.",
+      "heading_en": "Trust in Allah (Repeat 7 times)",
+      "heading_ml": "അല്ലാഹുവിൽ ഭരമേൽപ്പിക്കുമ്പോൾ (7 തവണ)"
     },
     {
       "id": 7,
-      "arabic": "بِسْمِ اللهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+      "arabic": "بِسْمِ اللهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّമِيُّ الْعَلِيمُ",
       "en_transliteration": "Bismillahil-ladhi la yadurru ma'asmihi shay'un fil-ardi wa la fis-sama'i wa Huwas-Sami'ul-'Alim.",
       "ml_transliteration": "ബിസ്മില്ലാഹില്ലദി ലാ യദുർറു മഅസ്മിഹി ശൈഉൻ ഫിൽ അർദി വലാ ഫിസ്സമായി വഹുവാ സമീഉൽ അളീം",
       "en_translation": "In the name of Allah with whose name nothing is harmed on earth nor in the heavens and He is the All-Hearing, the All-Knowing.",
       "ml_translation": "അല്ലാഹുവിന്റെ നാമത്തിൽ - അവന്റെ നാമത്തോടൊപ്പം ഭൂമിയിലോ ആകാശത്തിലോ ഉള്ള യാതൊന്നും ഉപദ്രവിക്കുകയില്ല. അവൻ എല്ലാം കേൾക്കുന്നവനും അറിയുന്നവനുമാണ്.",
       "reference": "Abu Dawud 4/323",
       "repeat": 3,
-      "en_benefit": "Protection from harm in the night",
-      "ml_benefit": "മൂന്ന് തവണ"
+      "en_benefit": "Whoever says this three times in the morning will not be afflicted by any calamity until evening, and whoever says it in the evening will not be afflicted until morning.",
+      "ml_benefit": "രാവിലെ ഇത് മൂന്ന് തവണ ചൊല്ലിയാൽ വൈകുന്നേരം വരെയും വൈകുന്നേരം ചൊല്ലിയാൽ രാവിലെ വരെയും യാതൊരു വിപത്തും അവരെ ബാധിക്കുകയില്ല.",
+      "heading_en": "Protection from All Harms (Repeat 3 times)",
+      "heading_ml": "വിപത്തുകളിൽ നിന്ന് കാവൽ ലഭിക്കാൻ (3 തവണ)"
     },
     {
       "id": 8,
@@ -263,8 +305,10 @@
       "ml_translation": "അല്ലാഹുവേ! എന്റെ ശരീരത്തിന് എനിക്ക് ആരോഗ്യം നൽകേണമേ. എന്റെ കേൾവിക്കും കാഴ്ചയ്ക്കും എനിക്ക് ആരോഗ്യം നൽകേണമേ. നീയല്ലാതെ മറ്റൊരു ആരാധ്യനില്ല. അല്ലാഹുവേ! അവിശ്വാസത്തിൽ നിന്നും ദാരിദ്ര്യത്തിൽ നിന്നും ഖബർ ശിക്ഷയിൽ നിന്നും ഞാൻ നിന്നോട് കാവൽ തേടുന്നു. നീയല്ലാതെ മറ്റൊരു ആരാധ്യനില്ല.",
       "reference": "Abu Dawud 4/324",
       "repeat": 3,
-      "en_benefit": "Supplication for health and protection",
-      "ml_benefit": "അരോഗ്യത്തിന്"
+      "en_benefit": "Seeking health for the body, hearing, and sight, and refuge from disbelief, poverty, and grave punishment.",
+      "ml_benefit": "ശരീരത്തിനും കേൾവിക്കും കാഴ്ചക്കും ആരോഗ്യവും, അവിശ്വാസത്തിൽ നിന്നും ദാരിദ്ര്യത്തിൽ നിന്നും ഖബർ ശിക്ഷയിൽ നിന്നും മോചനവും ലഭിക്കാൻ.",
+      "heading_en": "Supplication for Health and Wellbeing (Repeat 3 times)",
+      "heading_ml": "ആരോഗ്യത്തിനും സംരക്ഷണത്തിനും (3 തവണ)"
     },
     {
       "id": 9,
@@ -275,8 +319,10 @@
       "ml_translation": "അല്ലാഹുവിനെ റബ്ബായും ഇസ്‌ലാമിനെ ദീനായും (മതമായും) മുഹമ്മദ് നബി ﷺ യെ പ്രവാചകനായും സ്വീകരിക്കുന്നതിൽ ഞാൻ തൃപ്തനായിരിക്കുന്നു.",
       "reference": "Abu Dawud 4/318",
       "repeat": 3,
-      "en_benefit": "Allah will be pleased with him on the Day of Resurrection",
-      "ml_benefit": "അല്ലാഹുവിന്റെ തൃപ്തി ലഭിക്കാൻ"
+      "en_benefit": "Allah has promised that whoever says this three times every morning or evening will be pleased on the Day of Resurrection.",
+      "ml_benefit": "രാവിലെയോ വൈകുന്നേരമോ ഇത് മൂന്ന് തവണ ചൊല്ലിയാൽ അന്ത്യനാളിൽ അവരെ തൃപ്തിപ്പെടുത്തുമെന്ന് അല്ലാഹു കരാർ ചെയ്തിട്ടുണ്ട്.",
+      "heading_en": "Being Pleased with Allah (Repeat 3 times)",
+      "heading_ml": "അല്ലാഹുവിന്റെ തൃപ്തി ലഭിക്കാൻ (3 തവണ)"
     },
     {
       "id": 10,
@@ -287,20 +333,24 @@
       "ml_translation": "അല്ലാഹുവേ! എന്നെന്നും ജീവിച്ചിരിക്കുന്നവനേ, സർവ്വ നിയന്താവേ, നിന്റെ കാരുണ്യം കൊണ്ട് ഞാൻ സഹായം തേടുന്നു. എന്റെ എല്ലാ കാര്യങ്ങളും എനിക്ക് നന്നാക്കിത്തരേണമേ, ഒരു കണ്ണിമ വെട്ടുന്ന നേരം പോലും എന്നെ എന്നിലേക്ക് തന്നെ ഏൽപ്പിക്കരുതേ.",
       "reference": "Al-Hakim 1/545",
       "repeat": 1,
-      "en_benefit": "Entrusting all affairs to Allah",
-      "ml_benefit": "ദൈനദിന കാര്യങ്ങൾ നന്നാകാൻ"
+      "en_benefit": "Seeking Allah's mercy and help to rectify all affairs and not being left to oneself.",
+      "ml_benefit": "എല്ലാ കാര്യങ്ങളും നന്നാകാനും അല്ലാഹുവിന്റെ സഹായം ലഭിക്കാനും കണ്ണിമവെട്ടുന്ന നേരം പോലും നമ്മെ നമ്മിലേക്ക് ഏൽപ്പിക്കാതിരിക്കാനും.",
+      "heading_en": "Seeking Help from the Ever-Living",
+      "heading_ml": "ദൈനദിന കാര്യങ്ങൾ നന്നാകാൻ"
     },
     {
       "id": 11,
-      "arabic": "أَمْسَيْنَا عَلَى فِطْرَةِ الإِسْلاَمِ، وَعَلَى كَلِمَةِ الإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ ﷺ، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشْرِكِينَ",
+      "arabic": "أَمْسَيْنَا عَلَى فِطْرَةِ الإِسْلاَمِ، وَعَلَى كَلِمَةِ الإِخْലാَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ ﷺ، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَമَا كَانَ مِنَ الْمُشْرِكِينَ",
       "en_transliteration": "Amsayna 'ala fitratil-Islami wa 'ala kalimatil-ikhlas, wa 'ala dini Nabiyyina Muhammadin sallallahu 'alayhi wa sallam, wa 'ala millati abina Ibrahima hanifan Musliman wa ma kana minal-mushrikin.",
       "ml_transliteration": "അംസൈനാ അലാ ഫിത്‌റത്തിൽ ഇസ്‌ലാം, വ അലാ കലിമത്തിൽ ഇഖ്‌ലാസ്, വ അലാ ദീനി നബിയ്യീനാ മുഹമ്മദിൻ ﷺ, വ അലാ മില്ലത്തി അബീനാ ഇബ്രാഹീമ ഹനീഫൻ മുസ്‌ലിമൻ വ മാ കാന മിനൽ മുശ്‌രികീൻ.",
       "en_translation": "We have reached the evening upon the natural religion of Islam, the word of sincere devotion, the religion of our Prophet Muhammad (peace and blessings of Allah be upon him), and the faith of our father Ibrahim. He was upright (in belief) and a Muslim and was not of those who worship others besides Allah.",
       "ml_translation": "ഇസ്‌ലാമിൻ്റെ സഹജ പ്രകൃതിയിലും ഏകാത്മക വചനത്തിലുമാണ് ഞങ്ങൾ സന്ധ്യയടഞ്ഞത്. ഞങ്ങളുടെ പ്രവാചകൻ മുഹമ്മദ് നബി ﷺ യുടെ ദീനിലാണുള്ളത്. ഏകദൈവ വിശ്വാസിയും സത്യവഴിയേ ചരിക്കുന്ന മുസ്‌ലിമുമായ ഞങ്ങളുടെ പിതാവ് ഇബ്രാഹീം നബിയുടെ മാർഗ്ഗത്തിലുമാണ് ഞങ്ങൾ സന്ധ്യയടഞ്ഞത്. അദ്ദേഹം ഒരു ബഹുദൈവ വിശ്വാസിയായിരുന്നില്ല.",
       "reference": "Ahmad 3/406",
       "repeat": 1,
-      "en_benefit": "Affirming faith every evening",
-      "ml_benefit": "ദീനിലുള്ള ഉറപ്പ്"
+      "en_benefit": "Affirming adherence to Islam and the path of the Prophet Muhammad ﷺ and Ibrahim AS.",
+      "ml_benefit": "ഇസ്ലാമിലും തൗഹീദിലും ഉറച്ചു നിൽക്കാനും പ്രവാചക ചര്യകൾ പിന്തുടരാനും.",
+      "heading_en": "Affirming the Natural Disposition (Fitrah)",
+      "heading_ml": "ദീനിലുള്ള ഉറപ്പ്"
     },
     {
       "id": 12,
@@ -311,8 +361,10 @@
       "ml_translation": "അല്ലാഹുവിനെ ഞാൻ സ്തുതിക്കുന്നതോടൊപ്പം അവന്റെ പരിശുദ്ധിയെ പുകഴ്ത്തുകയും ചെയ്യുന്നു.",
       "reference": "Muslim 4/2071",
       "repeat": 100,
-      "en_benefit": "Great reward on the Day of Resurrection",
-      "ml_benefit": "നൂറ് തവണ"
+      "en_benefit": "Whoever says this 100 times in the morning and evening, none will come on the Day of Resurrection with anything better except one who has said the same or more.",
+      "ml_benefit": "രാവിലെയോ വൈകുന്നേരമോ ഇത് നൂറ് തവണ ചൊല്ലിയാൽ അന്ത്യനാളിൽ അവനേക്കാൾ ഉത്തമനായി ആരും വരികയില്ല.",
+      "heading_en": "Glorification of Allah (Repeat 100 times)",
+      "heading_ml": "പരിശുദ്ധിയെ പ്രകീർത്തിക്കാൻ (100 തവണ)"
     },
     {
       "id": 13,
@@ -323,20 +375,24 @@
       "ml_translation": "അല്ലാഹുവല്ലാതെ മറ്റ് ആരാധ്യനില്ല, അവൻ ഏകനാണ്, പങ്കാളിയില്ല. ആധിപത്യവും സ്തുതിയും അവനാണ്. അവൻ എല്ലാ കാര്യത്തിനും കഴിവുള്ളവനാണ്.",
       "reference": "Muslim 4/2071",
       "repeat": 10,
-      "en_benefit": "Protection from Shaytan and great rewards",
-      "ml_benefit": "പത്ത് തവണയോ നൂറ് തവണയോ"
+      "en_benefit": "Allah will write for him ten good deeds, erase ten evil deeds, and raise him ten degrees in status.",
+      "ml_benefit": "പത്ത് നന്മകൾ ലഭിക്കാനും പത്ത് പാപങ്ങൾ പൊറുക്കാനും പത്ത് പദവികൾ ഉയർത്താനും ഇത് സഹായിക്കുന്നു.",
+      "heading_en": "Affirming Allah's Oneness (Repeat 10 or 100 times)",
+      "heading_ml": "തൗഹീദ് പ്രഖ്യാപനം (10 അല്ലെങ്കിൽ 100 തവണ)"
     },
     {
       "id": 14,
-      "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي، وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْراتِي، وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي، وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي",
+      "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي، وَമَالِي، اللَّهُمَّ اسْتُرْ عَوْراتِي، وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي، وَعَنْ شِمَالِي، وَമِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي",
       "en_transliteration": "Allahumma inni as'alukal-'afwa wal-'afiyata fid-dunya wal-akhirah. Allahumma inni as'alukal-'afwa wal-'afiyata fi dini wa dunyaya wa ahli wa mali. Allahumma-stur 'awrati wa amin raw'ati. Allahumma-hfazni min bayni yadayya wa min khalfi wa 'an yamini wa 'an shimali wa min fawqi wa a'udhu bi'adhamatika an ughtala min tahti.",
       "ml_transliteration": "അല്ലാഹുമ്മ ഇന്നീ അസ്അലുകൽ അഫ്‌വ വൽ ആഫിയത ഫിദ്ദുൻയാ വൽ ആഖിറ. അല്ലാഹുമ്മ ഇന്നീ അസ്അലുകൽ അഫ്‌വ വൽ ആഫിയത ഫീ ദീനീ വ ദുൻയാ വ അഹ്‌ലീ വ മാലീ. അല്ലാഹുമ്മസ്തൂർ ഔറാത്തി വ ആമിൻ റൗആത്തി. അല്ലാഹുമ്മഹ് ഫദ്‌നീ മിൻ ബൈനി യദയ്യ വ മിൻ ഖൽഫീ വ അൻ യമീനീ വ അൻ ശിമാലീ വ മിൻ ഫൗഖീ വ അഊദു ബി അദമതിക അൻ ഉഗ്താല മിൻ തഹ്‌തീ",
       "en_translation": "O Allah, I ask You for forgiveness and well-being in this world and the next. O Allah, I ask You for forgiveness and well-being in my religion and my worldly affairs and my family and my property. O Allah, conceal my faults, calm my fears, and protect me from before me and behind me, from my right and my left, and from above me, and I seek refuge in Your greatness from being swallowed up from beneath me.",
       "ml_translation": "അല്ലാഹുവേ! ഇഹലോകത്തും പരലോകത്തും സർവ്വ സുരക്ഷിതത്വം ഞാൻ നിന്നോട് യാചിക്കുന്നു. അല്ലാഹുവേ! എന്റെ ദീനിലും ഭൗതിക ജീവിതത്തിലും കുടുംബത്തിലും സമ്പത്തിലും മാപ്പും സൗഖ്യവും ഞാൻ ചോദിക്കുന്നു. അല്ലാഹുവേ! എന്റെ വീഴ്ചകൾ നീ മറച്ചുപിടിക്കേണമേ, എന്റെ ഭയങ്ങളിൽ സമാധാനം നൽകേണമേ. അല്ലാഹുവേ! എന്റെ മുന്നിലൂടെയും പിന്നിലൂടെയും വലതുഭാഗത്തിലൂടെയും ഇടതുഭാഗത്തിലൂടെയും മുകളിലൂടെയും എന്നെ നീ കാക്കേണമേ. എനിക്ക് താഴെ നിന്ന് ചതിക്കപ്പെടുന്നതിനെ തൊട്ട് നിന്റെ മഹത്വം കൊണ്ട് ഞാൻ കാവൽ തേടുന്നു.",
       "reference": "Abu Dawud 5074",
       "repeat": 1,
-      "en_benefit": "Comprehensive protection for life, religion, family and wealth",
-      "ml_benefit": "സംരക്ഷണത്തിന്"
+      "en_benefit": "A comprehensive prayer for protection of life, religion, family and wealth.",
+      "ml_benefit": "മുന്നിൽ നിന്നും പിന്നിൽ നിന്നും എല്ലാ ഭാഗങ്ങളിൽ നിന്നുമുള്ള സംരക്ഷണത്തിനായി.",
+      "heading_en": "Comprehensive Prayer for Protection",
+      "heading_ml": "സമഗ്രമായ സംരക്ഷണത്തിന്"
     },
     {
       "id": 15,
@@ -344,11 +400,13 @@
       "en_transliteration": "A'udhu bikalimatillahit-tammati min sharri ma khalaq",
       "ml_transliteration": "അഊദു ബി കലിമാത്തില്ലാഹിത്തമ്മാത്തി മിൻ ശർറി മാ ഖലഖ്",
       "en_translation": "I seek refuge in the perfect words of Allah from the evil of what He has created.",
-      "ml_translation": "അല്ലാഹു സൃഷ്ടിച്ച വെവയുടെ തിന്മയിൽ നിന്ന് അവന്റെ പരിപൂർണ്ണമായ വചനങ്ങൾ കൊണ്ട് ഞാൻ കാവൽ തേടുന്നു.",
+      "ml_translation": "അല്ലാഹു സൃഷ്ടിച്ചവയുടെ തിന്മയിൽ നിന്ന് അവന്റെ പരിപൂർണ്ണമായ വചനങ്ങൾ കൊണ്ട് ഞാൻ കാവൽ തേടുന്നു.",
       "reference": "Muslim 4/2080",
       "repeat": 3,
-      "en_benefit": "Protection during the night",
-      "ml_benefit": "രാത്രിയിലെ സംരക്ഷണത്തിന് - മൂന്ന് തവണ"
+      "en_benefit": "Whoever says this three times in the evening, no harm will befall him that night.",
+      "ml_benefit": "സന്ധ്യക്ക് മൂന്ന് തവണ ഇത് ചൊല്ലിയാൽ അന്നത്തെ രാത്രി യാതൊരു ഉപദ്രവവും അവനെ ബാധിക്കുകയില്ല.",
+      "heading_en": "Protection from Evil of Creation (Repeat 3 times)",
+      "heading_ml": "സൃഷ്ടികളിലെ തിന്മകളിൽ നിന്ന് കാവൽ (3 തവണ)"
     }
   ],
   "after_prayer": [
@@ -361,8 +419,10 @@
       "ml_translation": "ഞാൻ അല്ലാഹുവോട് പാപമോചനം തേടുന്നു (3 തവണ).",
       "reference": "Muslim 1/414",
       "repeat": 1,
-      "en_benefit": "Said after every obligatory prayer",
-      "ml_benefit": "ഓരോ നിർബന്ധ നിസ്കാരത്തിന് ശേഷം"
+      "en_benefit": "Seeking forgiveness from Allah to compensate for any shortcomings in the prayer.",
+      "ml_benefit": "നമസ്കാരത്തിലെ പോരായ്മകൾക്ക് അല്ലാഹുവോട് പാപമോചനം തേടുന്നു.",
+      "heading_en": "Seeking Forgiveness after Prayer (Repeat 3 times)",
+      "heading_ml": "നമസ്കാര ശേഷം പാപമോചനം തേടുമ്പോൾ (3 തവണ)"
     },
     {
       "id": 2,
@@ -373,8 +433,10 @@
       "ml_translation": "അല്ലാഹുവേ! നീയാണ് സലാം (സമാധാനം), നിന്നിൽ നിന്നാണ് സമാധാനം. നീ വലിയ അനുഗ്രഹങ്ങൾ നൽകുന്നവനാണ്, മഹത്വവും ആദരവും ഉടയവനേ.",
       "reference": "Muslim 1/414",
       "repeat": 1,
-      "en_benefit": "Recited immediately after the three Istighfars",
-      "ml_benefit": "ഇസ്തിഗ്ഫാറിന് ശേഷം ഉടനെ"
+      "en_benefit": "Affirming that peace comes only from Allah.",
+      "ml_benefit": "ശാന്തിയും സമാധാനവും നൽകുന്നവൻ അല്ലാഹുവാണ് എന്ന പ്രഖ്യാപനം.",
+      "heading_en": "Affirming Allah as the Source of Peace",
+      "heading_ml": "ശാന്തിക്കായും സമാധാനത്തിനായും"
     },
     {
       "id": 3,
@@ -385,8 +447,10 @@
       "ml_translation": "അല്ലാഹുവല്ലാതെ മറ്റൊരു ആരാധ്യനില്ല, അവൻ ഏകനാണ്, അവന് പങ്കുകാരില്ല. ആധിപത്യവും സ്തുതിയും അവനാണ്. അവൻ എല്ലാ കാര്യത്തിനും കഴിവുള്ളവനാണ്. അല്ലാഹുവേ! നീ നൽകിയത് തടയാൻ ആരുമില്ല, നീ തടഞ്ഞത് നൽകാൻ ആരുമില്ല. ഐശ്വര്യവാനെയോ അവന്റെ ഐശ്വര്യമോ നിങ്കൽ ഉപകരിക്കുകയില്ല.",
       "reference": "Al-Bukhari 1/255, Muslim 1/414",
       "repeat": 1,
-      "en_benefit": "A powerful affirmation of Allah's absolute power",
-      "ml_benefit": "അല്ലാഹുവിന്റെ അധികാരം ഏറ്റുപറയൽ"
+      "en_benefit": "A powerful affirmation of Allah's absolute power and that only He can benefit or prevent.",
+      "ml_benefit": "അല്ലാഹുവിന്റെ അപാരമായ കഴിവിനെയും അവന്റെ തീരുമാനങ്ങളെ തടയാൻ ആർക്കും കഴിയില്ലെന്നും ഉള്ള ഏറ്റുപറയൽ.",
+      "heading_en": "Affirming Allah's Absolute Power",
+      "heading_ml": "അല്ലാഹുവിന്റെ ഏകത്വത്തിലുള്ള ഇഖ്‌ലാസ്"
     },
     {
       "id": 4,
@@ -397,8 +461,10 @@
       "ml_translation": "അല്ലാഹു എത്ര പരിശുദ്ധൻ (33 തവണ), സർവ്വ സ്തുതിയും അല്ലാഹുവിന് (33 തവണ), അല്ലാഹു ഏറ്റവും മഹാൻ (33 തവണ).",
       "reference": "Muslim 1/418",
       "repeat": 1,
-      "en_benefit": "Following the 33 recitations, conclude with: \"La ilaha illallahu wahdahu la sharika lahu, lahul-mulku walahul-hamdu wahuwa 'ala kulli shay'in qadir\" to have all sins forgiven even if they are as numerous as the foam of the sea.",
-      "ml_benefit": "99 തവണയായ ശേഷം നൂറാം തവണ ലാ ഇലാഹ ഇല്ലല്ലാഹു... എന്ന് ചൊല്ലിയാൽ പാപങ്ങൾ പൊറുക്കപ്പെടും"
+      "en_benefit": "Whoever says this will have all his sins forgiven, even if they are as numerous as the foam of the sea.",
+      "ml_benefit": "ഇത് ചൊല്ലി പാപമോചനം തേടിയാൽ സമുദ്രത്തിലെ നുരയോളമുണ്ടെങ്കിലും പാപങ്ങൾ പൊറുക്കപ്പെടും.",
+      "heading_en": "Tasbih, Tahmid and Takbir (Repeat 33 times each)",
+      "heading_ml": "തസ്ബീഹ്, തഹ്‌മീദ്, തക്ബീർ (33 തവണ വീതം)"
     },
     {
       "id": 5,
@@ -409,8 +475,10 @@
       "ml_translation": "അല്ലാഹു - അവനല്ലാതെ യാതൊരു ദൈവവുമില്ല. എന്നെന്നും ജീവിച്ചിരിക്കുന്നവൻ; എല്ലാം നിയന്ത്രിക്കുന്നവൻ. മയക്കമോ ഉറക്കമോ അവനെ ബാധിക്കുകയില്ല. ആകാശഭൂമികളിലുള്ളതെല്ലാം അവൻ്റെതാണ്. അവൻ്റെ അനുവാദമില്ലാതെ അവൻ്റെ അടുക്കൽ ശുപാർശ ചെയ്യാൻ കഴിയുന്നവൻ ആരുണ്ട്? അവരുടെ മുമ്പിലുള്ളതും പിന്നിലുള്ളതും അവൻ അറിയുന്നു. അവൻ്റെ അറിവിൽനിന്ന് അവൻ ഉദ്ദേശിക്കുന്നത് മഹത്തായ സിംഹാസനം (കുർസിയ്യ്) ആകാശഭൂമികളെ ഉൾക്കൊള്ളുന്നതാകുന്നു. അവയുടെ സംരക്ഷണം അവന് ഒട്ടും ഭാരമുള്ളതല്ല. അവൻ ഉന്നതനും മഹാനുമാണ്.",
       "reference": "An-Nasa'i (Amalul-Yawm wal-Laylah 100), Al-Baqarah 255",
       "repeat": 1,
-      "en_benefit": "Whoever recites this after every prayer, nothing prevents him from entering Paradise except death",
-      "ml_benefit": "ഓരോ നിസ്കാരത്തിന് ശേഷവും ഇത് ഓതുന്നവൻ സ്വർഗ്ഗാവകാശിയാണ്"
+      "en_benefit": "Whoever recites this after every prayer, nothing prevents him from entering Paradise except death.",
+      "ml_benefit": "ഓരോ നമസ്കാരത്തിന് ശേഷവും ഇത് പാരായണം ചെയ്യുന്നവന് സ്വർഗ്ഗത്തിലേക്ക് പ്രവേശിക്കാൻ മരണം മാത്രമേ തടസ്സമായുള്ളൂ.",
+      "heading_en": "Ayatul Kursi after Prayer",
+      "heading_ml": "നമസ്കാര ശേഷം ആയത്തുൽ കുർസി"
     }
   ],
   "prayer": [
@@ -423,8 +491,10 @@
       "ml_translation": "അല്ലാഹുവിന്റെ നാമത്തിൽ.",
       "reference": "Abu Dawud 3/347",
       "repeat": 1,
-      "en_benefit": "Said before starting Wudu",
-      "ml_benefit": "വുളൂഅ് തുടങ്ങുമ്പോൾ"
+      "en_benefit": "Starting an act of worship in the name of Allah brings blessings and protection.",
+      "ml_benefit": "അല്ലാഹുവിന്റെ നാമത്തിൽ വുളൂഅ് ആരംഭിക്കുന്നത് ബറകത്തിനും ഇരട്ടി പ്രതിഫലത്തിനും കാരണമാകുന്നു.",
+      "heading_en": "Supplication for Starting Wudu",
+      "heading_ml": "വുളൂഅ് ആരംഭിക്കുമ്പോൾ"
     },
     {
       "id": 2,
@@ -435,8 +505,10 @@
       "ml_translation": "അല്ലാഹുവല്ലാതെ ആരാധ്യനില്ലെന്നും അവൻ ഏകനാണെന്നും പങ്കുകാരില്ലെന്നും മുഹമ്മദ് നബി ﷺ അവന്റെ ദാസനും റസൂലുമാണെന്നും ഞാൻ സാക്ഷ്യം വഹിക്കുന്നു.",
       "reference": "Muslim 1/209",
       "repeat": 1,
-      "en_benefit": "Said after completing Wudu",
-      "ml_benefit": "വുളൂഅ് കഴിഞ്ഞ ശേഷം"
+      "en_benefit": "Whoever says this, the eight gates of Paradise are opened for him and he may enter through whichever one he wishes.",
+      "ml_benefit": "വുളൂഇന് ശേഷം ഇത് ചൊല്ലിയാൽ സ്വർഗ്ഗത്തിന് എട്ട് കവാടങ്ങൾ തുറക്കപ്പെടും, അവന് ഇഷ്ടമുള്ളതിലൂടെ പ്രവേശിക്കാം.",
+      "heading_en": "Supplication after Completing Wudu",
+      "heading_ml": "വുളൂഇന് ശേഷമുള്ള സുന്നത്ത് പ്രാർത്ഥന"
     },
     {
       "id": 3,
@@ -447,8 +519,10 @@
       "ml_translation": "അല്ലാഹുവേ, നിന്റെ കാരുണ്യത്തിന്റെ വാതിലുകൾ എനിക്ക് നീ തുറന്നു തരേണമേ.",
       "reference": "Muslim 1/495",
       "repeat": 1,
-      "en_benefit": "Said when entering the Mosque",
-      "ml_benefit": "പള്ളിയിൽ പ്രവേശിക്കുമ്പോൾ"
+      "en_benefit": "Asking for Allah's mercy before entering His house.",
+      "ml_benefit": "അല്ലാഹുവിന്റെ ഭവനത്തിലേക്ക് പ്രവേശിക്കുമ്പോൾ അവന്റെ കാരുണ്യത്തിനായി അപേക്ഷിക്കുന്നു.",
+      "heading_en": "Entering the Mosque",
+      "heading_ml": "പള്ളിയിൽ പ്രവേശിക്കുമ്പോൾ"
     },
     {
       "id": 4,
@@ -459,8 +533,10 @@
       "ml_translation": "അല്ലാഹുവേ, നിന്റെ അനുഗ്രഹത്തിൽ നിന്ന് ഞാൻ നിന്നോട് ചോദിക്കുന്നു.",
       "reference": "Muslim 1/495",
       "repeat": 1,
-      "en_benefit": "Said when leaving the Mosque",
-      "ml_benefit": "പള്ളിയിൽ നിന്ന് പുറത്തിറങ്ങുമ്പോൾ"
+      "en_benefit": "Asking for Allah's grace and bounty as one returns to worldly affairs.",
+      "ml_benefit": "പള്ളിയിൽ നിന്ന് പുറത്തിറങ്ങുമ്പോൾ അല്ലാഹുവിന്റെ അനുഗ്രഹത്തിനായി പ്രാർത്ഥിക്കുന്നു.",
+      "heading_en": "Leaving the Mosque",
+      "heading_ml": "പള്ളിയിൽ നിന്ന് പുറത്തിറങ്ങുമ്പോൾ"
     },
     {
       "id": 5,
@@ -497,8 +573,10 @@
       "ml_translation": "അല്ലാഹുവിന്റെ നാമത്തിൽ.",
       "reference": "Abu Dawud 3/347",
       "repeat": 1,
-      "en_benefit": "Said before eating",
-      "ml_benefit": "ഭക്ഷണം കഴിക്കുമ്പോൾ"
+      "en_benefit": "Remembrance of Allah's name brings blessings to the meal and prevents Shaytan from sharing it.",
+      "ml_benefit": "ഭക്ഷണം ആരംഭിക്കുന്നതിന് മുമ്പ് അല്ലാഹുവിന്റെ നാമം സ്മരിക്കുന്നത് ഭക്ഷണത്തിൽ ബറകത്ത് നൽകുകയും പിശാചിനെ അകറ്റുകയും ചെയ്യുന്നു.",
+      "heading_en": "Before Starting a Meal",
+      "heading_ml": "ഭക്ഷണം കഴിക്കാൻ തുടങ്ങുമ്പോൾ"
     },
     {
       "id": 2,
@@ -509,8 +587,10 @@
       "ml_translation": "ഈ ഭക്ഷണം എനിക്ക് നൽകുകയും എന്റെ യാതൊരു കഴിവോ കരുത്തോ കൂടാതെ എനിക്ക് ഇത് ഉപജീവനമായി നൽകുകയും ചെയ്ത അല്ലാഹുവിനാണ് സർവ്വ സ്തുതിയും.",
       "reference": "Abu Dawud 4/318",
       "repeat": 1,
-      "en_benefit": "Said after eating",
-      "ml_benefit": "ഭക്ഷണത്തിന് ശേഷം"
+      "en_benefit": "Expressing gratitude to Allah for providing sustenance.",
+      "ml_benefit": "ഭക്ഷണം നൽകിയ അല്ലാഹുവിന് നന്ദി പറയുമ്പോൾ അത് പുണ്യമായി തീരുന്നു.",
+      "heading_en": "After Finishing a Meal",
+      "heading_ml": "ഭക്ഷണത്തിന് ശേഷം"
     },
     {
       "id": 3,
@@ -521,8 +601,10 @@
       "ml_translation": "അല്ലാഹുവിന്റെ നാമത്തിൽ, ഞാൻ അല്ലാഹുവിൽ ഭരമേൽപ്പിക്കുന്നു. അല്ലാഹുവെക്കൊണ്ടല്ലാതെ യാതൊരു കഴിവും ശക്തിയുമില്ല.",
       "reference": "Abu Dawud 4/325",
       "repeat": 1,
-      "en_benefit": "Said when leaving home",
-      "ml_benefit": "വീട്ടിൽ നിന്ന് ഇറങ്ങുമ്പോൾ"
+      "en_benefit": "Whoever says this, it is said to him: 'You are guided, defended and protected.' The Shaytan will go far away from him.",
+      "ml_benefit": "വീട്ടിൽ നിന്ന് ഇറങ്ങുമ്പോൾ ഇത് ചൊല്ലിയാൽ അല്ലാഹു അവർക്ക് വഴികാട്ടുകയും സംരക്ഷണമേകുകയും ചെയ്യുന്നു. പിശാച് അവരിൽ നിന്ന് അകന്നുപോകും.",
+      "heading_en": "Leaving the Home",
+      "heading_ml": "വീട്ടിൽ നിന്ന് പുറത്തിറങ്ങുമ്പോൾ"
     },
     {
       "id": 4,
@@ -533,8 +615,10 @@
       "ml_translation": "അല്ലാഹുവിന്റെ നാമത്തിൽ ഞങ്ങൾ പ്രവേശിച്ചു, അല്ലാഹുവിന്റെ നാമത്തിൽ ഞങ്ങൾ പുറത്തു പോയി. ഞങ്ങളുടെ റബ്ബിൽ ഞങ്ങൾ ഭരമേൽപ്പിച്ചു.",
       "reference": "Abu Dawud 4/325",
       "repeat": 1,
-      "en_benefit": "Said when entering the home",
-      "ml_benefit": "വീട്ടിൽ പ്രവേശിക്കുമ്പോൾ"
+      "en_benefit": "Seeking Allah's protection for the home and family.",
+      "ml_benefit": "വീട്ടിൽ പ്രവേശിക്കുമ്പോൾ അല്ലാഹുവിന്റെ സംരക്ഷണവും നന്മയും ലഭിക്കാൻ.",
+      "heading_en": "Entering the Home",
+      "heading_ml": "വീട്ടിൽ പ്രവേശിക്കുമ്പോൾ"
     },
     {
       "id": 5,
@@ -545,8 +629,10 @@
       "ml_translation": "അല്ലാഹുവേ, ആൺ-പെൺ പിശാചുക്കളിൽ നിന്ന് ഞാൻ നിന്നോട് കാവൽ തേടുന്നു.",
       "reference": "Al-Bukhari 1/45",
       "repeat": 1,
-      "en_benefit": "Said when entering the toilet",
-      "ml_benefit": "ടോയ്‌ലറ്റിൽ പ്രവേശിക്കുമ്പോൾ"
+      "en_benefit": "Seeking refuge from spiritual and physical harms while in the toilet.",
+      "ml_benefit": "ശുചിമുറിയിൽ പ്രവേശിക്കുമ്പോൾ പൈശാചിക ബാധകളിൽ നിന്നും മാലിന്യങ്ങളിൽ നിന്നും കാവൽ തേടുന്നു.",
+      "heading_en": "Entering the Toilet",
+      "heading_ml": "ടോയ്‌ലറ്റിൽ പ്രവേശിക്കുമ്പോൾ"
     },
     {
       "id": 6,
@@ -557,8 +643,10 @@
       "ml_translation": "നിന്റെ മാപ്പിനെ ഞാൻ ചോദിക്കുന്നു.",
       "reference": "Abu Dawud 1/5",
       "repeat": 1,
-      "en_benefit": "Said when leaving the toilet",
-      "ml_benefit": "ടോയ്‌ലറ്റിൽ നിന്ന് പുറത്തിറങ്ങുമ്പോൾ"
+      "en_benefit": "Asking for Allah's forgiveness for not being able to remember Him while in the toilet.",
+      "ml_benefit": "ശുചിമുറിയിൽ ആയിരിക്കുമ്പോൾ അല്ലാഹുവിനെ സ്മരിക്കാൻ കഴിയാത്തതിലുള്ള സങ്കടവും അവിടുത്തെ പാപമോചനവും തേടുന്നു.",
+      "heading_en": "Leaving the Toilet",
+      "heading_ml": "ടോയ്‌ലറ്റിൽ നിന്ന് പുറത്തിറങ്ങുമ്പോൾ"
     },
     {
       "id": 7,
@@ -569,8 +657,10 @@
       "ml_translation": "അല്ലാഹുവേ, നീ എന്റെ സൃഷ്ടിപ്പ് ഭംഗിയാക്കിയത് പോലെ എന്റെ സ്വഭാവവും ഭംഗിയാക്കേണമേ.",
       "reference": "Ahmad 1/403",
       "repeat": 1,
-      "en_benefit": "Said when looking in the mirror",
-      "ml_benefit": "കണ്ണാടിയിൽ നോക്കുമ്പോൾ"
+      "en_benefit": "Asking Allah for good character, just as He has given a good appearance.",
+      "ml_benefit": "നല്ല രൂപം നൽകിയത് പോലെ നല്ല സ്വഭാവം കൂടി നൽകാൻ അല്ലാഹുവോട് അപേക്ഷിക്കുന്നു.",
+      "heading_en": "Looking in the Mirror",
+      "heading_ml": "കണ്ണാടിയിൽ നോക്കുമ്പോൾ"
     },
     {
       "id": 8,
@@ -595,8 +685,10 @@
       "ml_translation": "വിശ്വാസികളും മുസ്‌ലിമുകളുമായ ഖബർ നിവാസികളേ നിങ്ങൾക്ക് സലാം. തീർച്ചയായും അല്ലാഹു ഉദ്ദേശിച്ചാൽ ഞങ്ങളും നിങ്ങളോടൊപ്പം വന്നുചേരുന്നവരാണ്. നിങ്ങൾക്കും ഞങ്ങൾക്കും സൗഖ്യം നൽകാൻ ഞാൻ അല്ലാഹുവോട് ചോദിക്കുന്നു.",
       "reference": "Muslim 2/671",
       "repeat": 1,
-      "en_benefit": "Said when visiting the graveyard (Qabar Ziyarat)",
-      "ml_benefit": "ഖബർ സിയാറത്ത് ദുആ (ഖബർ സന്ദർശനം)"
+      "en_benefit": "Offering peace to the deceased and remembering one's own mortality.",
+      "ml_benefit": "മരണപ്പെട്ടവർക്ക് വേണ്ടി സമാധാനത്തിന് പ്രാർത്ഥിക്കുകയും സ്വന്തം മരണത്തെക്കുറിച്ച് ചിന്തിക്കുകയും ചെയ്യുന്നു.",
+      "heading_en": "Visiting the Graveyard",
+      "heading_ml": "ഖബർ സന്ദർശിക്കുമ്പോൾ"
     }
   ],
   "nature": [
@@ -609,8 +701,10 @@
       "ml_translation": "അല്ലാഹുവേ, ഇത് ഉപകാരപ്രദമായ മഴയാക്കേണമേ.",
       "reference": "Al-Bukhari 2/608",
       "repeat": 1,
-      "en_benefit": "Said when it rains",
-      "ml_benefit": "മഴ പെയ്യുമ്പോൾ"
+      "en_benefit": "Asking Allah for a rain that brings life and benefit, and seeking refuge from harmful storms.",
+      "ml_benefit": "നന്മയുള്ളതും ഉപകാരപ്രദവുമായ മഴക്കായി അല്ലാഹുവോട് പ്രാർത്ഥിക്കുന്നു.",
+      "heading_en": "When it Rains",
+      "heading_ml": "മഴ പെയ്യുമ്പോൾ"
     },
     {
       "id": 2,
@@ -621,8 +715,10 @@
       "ml_translation": "അല്ലാഹുവിന്റെ അനുഗ്രഹത്താലും കാരുണ്യത്താലും ഞങ്ങൾക്ക് മഴ ലഭിച്ചിരിക്കുന്നു.",
       "reference": "Al-Bukhari 1/205, Muslim 1/83",
       "repeat": 1,
-      "en_benefit": "Said after it has rained",
-      "ml_benefit": "മഴ ലഭിച്ച ശേഷം"
+      "en_benefit": "Reminding oneself that rain is a gift from Allah's mercy and bounty.",
+      "ml_benefit": "മഴ ലഭിച്ചത് അല്ലാഹുവിന്റെ വലിയ അനുഗ്രഹമാണെന്ന് നന്ദിപൂർവ്വം ഓർക്കുന്നു.",
+      "heading_en": "After it has Rained",
+      "heading_ml": "മഴ തോർന്ന ശേഷം"
     },
     {
       "id": 3,
@@ -633,8 +729,10 @@
       "ml_translation": "ഇടിനാദം അല്ലാഹുവിനെ സ്തുതിച്ചു കൊണ്ടും മലക്കുകൾ അവനെ ഭയപ്പെട്ടും പരിശുദ്ധപ്പെടുത്തുന്നു.",
       "reference": "Muwatta 2/992",
       "repeat": 1,
-      "en_benefit": "Said upon hearing thunder",
-      "ml_benefit": "ഇടിനാദം കേൾക്കുമ്പോൾ"
+      "en_benefit": "Affirming Allah's greatness through His powerful creation like thunder.",
+      "ml_benefit": "ഇടിനാദം അല്ലാഹുവിനെ പ്രകീർത്തിക്കുന്നത് പോലെ സത്യവിശ്വാസിയും അവനെ സ്തുതിക്കുന്നു.",
+      "heading_en": "Upon Hearing Thunder",
+      "heading_ml": "ഇടിമിന്നലോ ഇടിനാദമോ കേൾക്കുമ്പോൾ"
     },
     {
       "id": 4,
@@ -645,8 +743,10 @@
       "ml_translation": "അല്ലാഹുവേ, ഇതിന്റെ നന്മ ഞാൻ നിന്നോട് ചോദിക്കുന്നു, ഇതിന്റെ തിന്മയിൽ നിന്ന് ഞാൻ നിന്നോട് കാവൽ തേടുന്നു.",
       "reference": "Abu Dawud 4/326",
       "repeat": 1,
-      "en_benefit": "Said when the wind blows strongly",
-      "ml_benefit": "ശക്തമായ കാറ്റുള്ളപ്പോൾ"
+      "en_benefit": "Seeking the good of the wind and protection from its potentially destructive power.",
+      "ml_benefit": "കാറ്റിൽ നിന്നുള്ള ഗുണം ചോദിക്കുകയും അതിന്റെ തിന്മയിൽ നിന്ന് കാവൽ തേടുകയും ചെയ്യുന്നു.",
+      "heading_en": "When the Wind Blows Strongly",
+      "heading_ml": "ശക്തമായ കാറ്റുള്ളപ്പോൾ"
     }
   ],
   "sleep": [
@@ -659,8 +759,10 @@
       "ml_translation": "അല്ലാഹുവേ, നിന്റെ നാമത്തിൽ ഞാൻ മരിക്കുകയും ജീവിക്കുകയും ചെയ്യുന്നു.",
       "reference": "Al-Bukhari 11/113, Muslim 4/2083",
       "repeat": 1,
-      "en_benefit": "Said before sleeping",
-      "ml_benefit": "ഉറങ്ങുന്നതിന് മുമ്പ്"
+      "en_benefit": "Entrusting one's life and death to Allah before sleep.",
+      "ml_benefit": "ജീവിതത്തെയും മരണത്തെയും അല്ലാഹുവിൽ സമർപ്പിച്ച് കൊണ്ട് നിദ്രയിലേക്ക് പ്രവേശിക്കുന്നു.",
+      "heading_en": "Supplication before Sleeping",
+      "heading_ml": "ഉറങ്ങാൻ നേരം"
     },
     {
       "id": 2,
@@ -671,8 +773,10 @@
       "ml_translation": "അല്ലാഹുവേ, നിന്റെ അടിമകളെ ഉയിർത്തെഴുന്നേൽപ്പിക്കുന്ന ദിവസം നിന്റെ ശിക്ഷയിൽ നിന്ന് എന്നെ കാക്കേണമേ.",
       "reference": "Abu Dawud 4/311",
       "repeat": 3,
-      "en_benefit": "Said when lying down to sleep",
-      "ml_benefit": "ഉറങ്ങാൻ കിടക്കുമ്പോൾ"
+      "en_benefit": "Seeking protection from the fire of Hell and the terrors of the Day of Judgment.",
+      "ml_benefit": "നരകശിക്ഷയിൽ നിന്നും ഖബർ ശിക്ഷയിൽ നിന്നും അല്ലാഹുവിനോട് കാവൽ തേടുന്നു.",
+      "heading_en": "Protection from Grave Punishment (Repeat 3 times)",
+      "heading_ml": "ശിക്ഷകളിൽ നിന്ന് കാവൽ തേടി (3 തവണ)"
     },
     {
       "id": 4,
@@ -683,8 +787,10 @@
       "ml_translation": "അല്ലാഹുവേ, നിന്റെ നാമത്തിൽ ഞാൻ ജീവിക്കുകയും മരിക്കുകയും ചെയ്യുന്നു.",
       "reference": "Muslim 4/2083",
       "repeat": 1,
-      "en_benefit": "Said when waking up",
-      "ml_benefit": "ഉണർന്ന ശേഷം"
+      "en_benefit": "Expressing gratitude for another day of life and the opportunity to worship.",
+      "ml_benefit": "ജീവിതം തിരികെ നൽകിയ അല്ലാഹുവിന് സമാധാനത്തോടെ നന്ദി പ്രകാശിപ്പിക്കുന്നു.",
+      "heading_en": "Waking up from Sleep",
+      "heading_ml": "ഉറക്കമുണർന്ന നേരം"
     },
     {
       "id": 5,
@@ -695,8 +801,10 @@
       "ml_translation": "ഞങ്ങളെ മരിപ്പിച്ചതിന് ശേഷം (ഉറക്കം) ജീവിപ്പിച്ച അല്ലാഹുവിനാണ് സർവ്വ സ്തുതിയും. അവനിലേക്കാണ് ഉയിർത്തെഴുന്നേൽപ്പ്.",
       "reference": "Al-Bukhari 11/113, Muslim 4/2083",
       "repeat": 1,
-      "en_benefit": "Said when waking up from sleep",
-      "ml_benefit": "ഉറക്കത്തിൽ നിന്ന് ഉണരുമ്പോൾ"
+      "en_benefit": "Remembrance of the resurrection and Allah's power over life and death.",
+      "ml_benefit": "മരണത്തിന് തുല്യമായ ഉറക്കത്തിന് ശേഷം ജീവിതം നൽകിയതിന് അല്ലാഹുവിനെ സ്തുതിക്കുന്നു.",
+      "heading_en": "Praising Allah upon Waking",
+      "heading_ml": "ഉണർന്ന ശേഷമുള്ള നന്ദി പ്രകാശനം"
     }
   ],
   "sick": [
@@ -709,8 +817,10 @@
       "ml_translation": "മനുഷ്യരുടെ റബ്ബേ, ഈ വിഷമം നീക്കേണമേ. ഭേദമാക്കേണമേ, നീയാണ് ഭേദമാക്കുന്നവൻ. ഒരു രോഗവും ബാക്കി വെക്കാത്ത വിധത്തിൽ നീ ഭേദമാക്കേണമേ.",
       "reference": "Al-Bukhari 7/158, Muslim 4/1721",
       "repeat": 1,
-      "en_benefit": "Supplication for the sick",
-      "ml_benefit": "രോഗിക്ക് വേണ്ടിയുള്ള ദുആ"
+      "en_benefit": "Seeking a complete and lasting cure from the only true Healer.",
+      "ml_benefit": "രോഗങ്ങളിൽ നിന്ന് പൂർണ്ണമായ ശമനം ലഭിക്കാനായി അല്ലാഹുവോട് അപേക്ഷിക്കുന്നു.",
+      "heading_en": "Supplication for the Sick",
+      "heading_ml": "രോഗികൾക്ക് വേണ്ടിയുള്ള പ്രാർത്ഥന"
     },
     {
       "id": 2,
@@ -721,8 +831,10 @@
       "ml_translation": "വിഷമിക്കേണ്ടതില്ല, ഇൻ ശാ അല്ലാഹു പാപങ്ങളിൽ നിന്ന് ഇത് ശുദ്ധീകരണമാണ്.",
       "reference": "Al-Bukhari 10/118",
       "repeat": 1,
-      "en_benefit": "Said when visiting the sick",
-      "ml_benefit": "രോഗിയെ സന്ദർ സന്ദർശിക്കുമ്പോൾ"
+      "en_benefit": "Offering words of comfort and hope for purification through illness.",
+      "ml_benefit": "രോഗിയെ ആശ്വസിപ്പിക്കുകയും രോഗം പാപമോചനത്തിന് കാരണമാകുമെന്ന് ഓർമ്മിപ്പിക്കുകയും ചെയ്യുന്നു.",
+      "heading_en": "When Visiting the Sick",
+      "heading_ml": "രോഗിയെ സന്ദർശിക്കുമ്പോൾ"
     }
   ],
   "travel": [
@@ -735,8 +847,10 @@
       "ml_translation": "അല്ലാഹു മഹാൻ (3 തവണ). ഇത് ഞങ്ങൾക്ക് കീഴ്‌പ്പെടുത്തി തന്നവൻ പരിശുദ്ധൻ. നിശ്ചയമായും ഞങ്ങൾ ഞങ്ങളുടെ റബ്ബിലേക്ക് മടങ്ങുന്നവരാണ്.",
       "reference": "Muslim 2/998",
       "repeat": 1,
-      "en_benefit": "Supplication for starting travel",
-      "ml_benefit": "യാത്ര തുടങ്ങുമ്പോൾ"
+      "en_benefit": "Seeking Allah's protection and acknowledging His sovereignty at the beginning of a journey.",
+      "ml_benefit": "യാത്ര ആരംഭിക്കുമ്പോൾ അല്ലാഹുവിനെ സ്മരിക്കുന്നതിലൂടെ യാത്രയിൽ ബറകത്തും സംരക്ഷണവും ലഭിക്കുന്നു.",
+      "heading_en": "Starting a Journey",
+      "heading_ml": "യാത്ര പുറപ്പെടുമ്പോൾ"
     },
     {
       "id": 2,
@@ -745,10 +859,12 @@
       "ml_transliteration": "അല്ലാഹുമ്മ ഇന്നീ അഊദു ബിക മിൻ വഅ്സാഇസ്സഫർ വ കാബത്തിൽ മൻളർ വ സൂഇൽ മുൻഖലബി ഫിൽ മാലി വൽ അഹ്‌ൽ",
       "en_translation": "O Allah, I seek refuge in You from the hardships of travel, any gloomy outlook in what I see, and any evil return to my property or my family.",
       "ml_translation": "അല്ലാഹുവേ, യാത്രയിലെ കഷ്ടപ്പാടുകളിൽ നിന്നും സങ്കടകരമായ കാഴ്ചകളിൽ നിന്നും ഞങ്ങൾ നിന്നോട് കാവൽ തേടുന്നു. പദവിയിലും കുടുംബത്തിലും മോശമായ രീതിയിലുള്ള മടക്കത്തെ തൊട്ടും ഞാൻ നിന്നോട് കാവൽ തേടുന്നു.",
-      "reference": "Muslim 2/998",
+      "reference": "Abu Dawud 4/326",
       "repeat": 1,
-      "en_benefit": "Said during travel for protection",
-      "ml_benefit": "യാത്രയിലെ സംരക്ഷണത്തിന്"
+      "en_benefit": "Asking for safety from travel hardships and protection for the family and wealth left behind.",
+      "ml_benefit": "യാത്രയിലെ പ്രയാസങ്ങളിൽ നിന്നും കുടുംബത്തിന്റെയും സമ്പത്തിന്റെയും സംരക്ഷണത്തിനായും പ്രാർത്ഥിക്കുന്നു.",
+      "heading_en": "Protection during Travel",
+      "heading_ml": "യാത്രയിലെ സംരക്ഷണത്തിന്"
     }
   ]
 }

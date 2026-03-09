@@ -7,7 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { Compass, MapPin, Moon, RefreshCw, Sun, Sunrise, Sunset } from 'lucide-react-native';
 import React, { useCallback, useEffect, useState } from 'react';
-import { ActivityIndicator, ImageBackground, ScrollView, StatusBar, Text, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, ImageBackground, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 const TimerBox = ({ value, label, active }: { value: string, label: string, active?: boolean }) => (
     <View className="items-center">
@@ -161,7 +161,7 @@ export default function PrayersScreen() {
 
     return (
         <View className="flex-1 bg-[#050805]">
-            <StatusBar barStyle="light-content" />
+            {/* <StatusBar barStyle="light-content" /> */}
 
             {/* Top Header Section */}
             <ImageBackground

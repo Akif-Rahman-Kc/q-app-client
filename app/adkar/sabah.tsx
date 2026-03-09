@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { ArrowLeft, Check, RotateCcw, Star } from 'lucide-react-native';
 import React, { useCallback, useMemo, useState } from 'react';
-import { Pressable, ScrollView, StatusBar, Text, View } from 'react-native';
+import { Pressable, ScrollView, Text, View } from 'react-native';
 
 type Adkar = {
     id: number;
@@ -20,6 +20,8 @@ type Adkar = {
     en_benefit?: string;
     ml_benefit?: string;
     benefit?: string;
+    heading_en?: string;
+    heading_ml?: string;
 };
 
 const sabahAdkar: Adkar[] = (adkarData as any).sabah;
@@ -95,10 +97,10 @@ export default function SabahScreen() {
 
     return (
         <LinearGradient colors={['#050f05', '#0a1a0f', '#0d2210']} style={{ flex: 1 }}>
-            <StatusBar barStyle="light-content" backgroundColor="#050f05" />
+            {/* <StatusBar barStyle="light-content" backgroundColor="#050f05" /> */}
 
             {/* Header */}
-            <View style={{ paddingTop: 52, paddingHorizontal: 20, paddingBottom: 16 }}>
+            <View style={{ paddingTop: 40, paddingHorizontal: 20, paddingBottom: 16 }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 20 }}>
                     <Pressable
                         onPress={() => router.back()}
@@ -200,6 +202,15 @@ export default function SabahScreen() {
                                     <Star size={22} color={favorites.has(adkar.id) ? "#facc15" : "#4b5563"} fill={favorites.has(adkar.id) ? "#facc15" : "transparent"} />
                                 </Pressable>
                             </View>
+
+                            {/* Heading */}
+                            {(translationLanguage === 'ml' ? adkar.heading_ml : adkar.heading_en) && (
+                                <View style={{ paddingHorizontal: 20, paddingTop: 4 }}>
+                                    <Text style={{ color: '#10b981', fontSize: 13, fontWeight: '800', textTransform: 'uppercase', letterSpacing: 1 }}>
+                                        {translationLanguage === 'ml' ? adkar.heading_ml : adkar.heading_en}
+                                    </Text>
+                                </View>
+                            )}
 
                             {/* Arabic Text */}
                             <View style={{ paddingHorizontal: 20, paddingBottom: 16, paddingTop: 4 }}>

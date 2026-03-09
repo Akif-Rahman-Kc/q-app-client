@@ -1,14 +1,12 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 import '../global.css';
 
-// // Ignore specific warnings as requested by the user
-// LogBox.ignoreLogs([
-//   'Text strings must be rendered within a <Text> component',
-//   'Text strings must be rendered within a <Text> component.',
-// ]);
+// Prevent the splash screen from auto-hiding before asset loading is complete.
+SplashScreen.preventAutoHideAsync();
 
 import { LocationProvider } from '@/contexts/LocationContext';
 import { useColorScheme } from '@/hooks/use-color-scheme';
@@ -27,6 +25,14 @@ export default function RootLayout() {
   const sessionStartTime = useRef<number | null>(null);
 
   useEffect(() => {
+    // Hide the splash screen after a 2.5-second delay to show the intro image
+    const hideSplash = async () => {
+      await new Promise(resolve => setTimeout(resolve, 2500));
+      await SplashScreen.hideAsync();
+    };
+
+    hideSplash();
+
     checkAndUpdateStreak();
 
     if (appState.current === 'active') {

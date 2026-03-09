@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Stack, useFocusEffect, useRouter } from 'expo-router';
 import { ChevronLeft, Star, StarOff } from 'lucide-react-native';
 import React, { useState } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, StatusBar, Text, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Pressable, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 const data = adkarData as any;
 
@@ -70,7 +70,7 @@ export default function AdkarFavoritesScreen() {
             colors={['#0a0f0a', '#0f1a14', '#0a0f0a']}
             style={{ flex: 1 }}
         >
-            <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
+            {/* <StatusBar barStyle="light-content" backgroundColor="transparent" translucent /> */}
 
             <Stack.Screen options={{ headerShown: false }} />
 

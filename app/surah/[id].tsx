@@ -1,7 +1,7 @@
 import { Stack, useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { Bookmark, ChevronLeft, Moon, Share2, Sun } from 'lucide-react-native';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, AppState, Pressable, ScrollView, Share, StatusBar, Text, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, AppState, Pressable, ScrollView, Share, Text, TouchableOpacity, View } from 'react-native';
 
 // Imported offline full Quran text
 import CustomAlert from '@/components/CustomAlert';
@@ -274,7 +274,7 @@ export default function SurahScreen() {
     return (
         <View className="flex-1 pt-7 bg-[#050f05]">
             <Stack.Screen options={{ headerShown: false }} />
-            <StatusBar barStyle="light-content" />
+            {/* <StatusBar barStyle="light-content" /> */}
 
             {/* Header */}
             <View className="flex-row items-center justify-between px-4 py-3 border-b border-[#142114]">

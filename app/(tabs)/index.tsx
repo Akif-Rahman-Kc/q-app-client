@@ -195,10 +195,14 @@ export default function TodayScreen() {
   const nextPrayerNameRaw = prayerTimes ? prayerTimes.nextPrayer() : 'none';
 
   return (
-    <LinearGradient colors={['#050f05', '#0a1a0f', '#050f05']} style={{ flex: 1, paddingTop: 56 }}>
+    <LinearGradient colors={['#050f05', '#0a1a0f', '#050f05']} style={{ flex: 1, paddingTop: 40 }}>
       {/* Header */}
       <View className="flex-row justify-between items-center px-6 mb-4">
-        <TouchableOpacity onPress={() => router.push('/location-search')} className="flex-row items-center flex-1">
+        <TouchableOpacity
+          // onPress={() => router.push('/location-search')}
+          onPress={() => refreshCurrentLocation()}
+          className="flex-row items-center flex-1"
+        >
           <MapPin size={22} color="#10b981" />
           <View className="ml-3 flex-1">
             <Text className="text-white font-bold text-[14px]" numberOfLines={1}>

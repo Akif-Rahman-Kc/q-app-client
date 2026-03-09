@@ -9,7 +9,7 @@ import {
 } from 'lucide-react-native';
 import React, { useMemo, useState } from 'react';
 import {
-    ImageBackground, ScrollView, StatusBar,
+    ImageBackground, ScrollView,
     Text, TextInput, TouchableOpacity, View
 } from 'react-native';
 
@@ -101,7 +101,7 @@ export default function AdkarScreen() {
 
     return (
         <LinearGradient colors={['#050f05', '#0a1a0f', '#050f05']} style={{ flex: 1, paddingTop: 32 }}>
-            <StatusBar barStyle="light-content" backgroundColor="#0a0f0a" />
+            {/* <StatusBar barStyle="light-content" backgroundColor="#0a0f0a" /> */}
 
             {/* Header */}
             <View className="flex-row justify-between items-center px-6 py-4">

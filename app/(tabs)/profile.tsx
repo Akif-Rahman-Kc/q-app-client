@@ -8,7 +8,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { BarChart3, Bell, Book, Camera, Flame, Heart, Pencil, PlusCircle, Trash2 } from 'lucide-react-native';
 import React, { useEffect, useState } from 'react';
-import { Image, Modal, Pressable, ScrollView, StatusBar, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, Modal, Pressable, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-controller';
 
 const STORAGE_KEY = '@quran_profile_data';
@@ -217,7 +217,7 @@ export default function ProfileGoalsScreen() {
 
     return (
         <LinearGradient colors={['#050f05', '#0a1a0f', '#050f05']} style={{ flex: 1, paddingTop: 48 }}>
-            <StatusBar barStyle="light-content" />
+            {/* <StatusBar barStyle="light-content" /> */}
 
             {/* Header */}
             <View className="flex-row justify-between items-center px-6 pb-4 border-b border-[#1a241a]">

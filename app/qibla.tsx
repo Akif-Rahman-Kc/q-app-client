@@ -2,7 +2,7 @@ import { useLocationContext } from '@/contexts/LocationContext';
 import { Coordinates, Qibla } from 'adhan';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as Location from 'expo-location';
-import { Stack, useRouter } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { Magnetometer } from 'expo-sensors';
 import { ChevronLeft, MapPin } from 'lucide-react-native';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -166,7 +166,7 @@ export default function QiblaScreen() {
             colors={['#0a0f0a', '#0f1a14', '#0a0f0a']}
             className="flex-1"
         >
-            <Stack.Screen options={{ headerShown: false }} />
+            {/* <Stack.Screen options={{ headerShown: false }} /> */}
 
             {/* Header */}
             <View className="flex-row items-center justify-between px-4 py-3 border-b border-[#142114] mt-10">

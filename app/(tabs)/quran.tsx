@@ -2,7 +2,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { Bookmark, Search } from 'lucide-react-native';
 import React, { useState } from 'react';
-import { ScrollView, StatusBar, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 import juzsData from '../../assets/data/juzs.json';
 import surahsData from '../../assets/data/surahs.json';
@@ -27,7 +27,7 @@ export default function QuranScreen() {
 
     return (
         <LinearGradient colors={['#050f05', '#0a1a0f', '#050f05']} style={{ flex: 1, paddingTop: 32 }}>
-            <StatusBar barStyle="light-content" />
+            {/* <StatusBar barStyle="light-content" /> */}
 
             {/* Header */}
             <View className="flex-row justify-between items-center px-6 py-4">
