@@ -1,4 +1,4 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import { DarkTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
@@ -79,7 +79,7 @@ export default function RootLayout() {
   return (
     <KeyboardProvider>
       <LocationProvider>
-        <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <ThemeProvider value={DarkTheme}>
           <Stack>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="location-search" options={{ presentation: 'modal', title: 'Search Location', headerShown: false }} />
@@ -87,7 +87,7 @@ export default function RootLayout() {
             <Stack.Screen name="adkar/masa" options={{ headerShown: false }} />
             <Stack.Screen name="adkar/[category]" options={{ headerShown: false }} />
           </Stack>
-          <StatusBar style="auto" />
+          <StatusBar style="light" />
         </ThemeProvider>
       </LocationProvider>
     </KeyboardProvider>

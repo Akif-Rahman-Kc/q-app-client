@@ -1,5 +1,5 @@
 import { Stack, useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
-import { Bookmark, ChevronLeft, Moon, Share2, Sun } from 'lucide-react-native';
+import { Bookmark, ChevronLeft, Minus, Moon, Plus, Share2, Sun } from 'lucide-react-native';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, AppState, Pressable, ScrollView, Share, Text, TouchableOpacity, View } from 'react-native';
 
@@ -26,6 +26,7 @@ export default function SurahScreen() {
     const [viewMode, setViewMode] = useState(initialViewMode ? (initialViewMode as string) : ((scrollToAyah || showAyahs) ? 'Translation' : 'Reading')); // Default to Translation if scrolling to Ayah
     const [startIndex, setStartIndex] = useState<number>(0);
     const [readingTheme, setReadingTheme] = useState<'dark' | 'light'>('dark');
+    const [fontSize, setFontSize] = useState(28);
     const [translationLanguage, setTranslationLanguage] = useState<'ml' | 'en'>('ml'); // Default to Malayalam
     const [bookmarkedAyahs, setBookmarkedAyahs] = useState<Set<number>>(new Set());
     const [lastReadAyahNumber, setLastReadAyahNumber] = useState<number | null>(null);
@@ -294,54 +295,78 @@ export default function SurahScreen() {
                 </Pressable>
             </View>
 
-            {/* View Mode Switcher */}
-            <View className="px-16 py-2 border-b border-[#142114]">
-                <View className="flex-row p-1 rounded-xl bg-[#142114]">
-                    <TouchableOpacity
-                        activeOpacity={1}
-                        onPress={() => setViewMode('Reading')}
-                        className="flex-1 py-1.5 rounded-lg"
-                        style={{ backgroundColor: viewMode === 'Reading' ? '#10b981' : 'transparent' }}
-                    >
-                        <Text
-                            className="text-center font-bold text-sm"
-                            style={{ color: viewMode === 'Reading' ? '#050f05' : '#9ca3af' }}
+            {/* Compact Tool Bar */}
+            <View className="px-4 py-2 border-b border-[#142114] bg-[#050f05]">
+                <View className="flex-row items-center justify-between">
+                    {/* View Mode Switcher */}
+                    <View className="flex-row p-1 rounded-xl bg-[#142114] flex-1 mr-4">
+                        <TouchableOpacity
+                            activeOpacity={1}
+                            onPress={() => setViewMode('Reading')}
+                            className="flex-1 py-1.5 rounded-lg"
+                            style={{ backgroundColor: viewMode === 'Reading' ? '#10b981' : 'transparent' }}
                         >
-                            Reading
-                        </Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        activeOpacity={1}
-                        onPress={() => setViewMode('Translation')}
-                        className="flex-1 py-1.5 rounded-lg"
-                        style={{ backgroundColor: viewMode === 'Translation' ? '#10b981' : 'transparent' }}
-                    >
-                        <Text
-                            className="text-center font-bold text-sm"
-                            style={{ color: viewMode === 'Translation' ? '#050f05' : '#9ca3af' }}
+                            <Text
+                                className="text-center font-bold text-xs"
+                                style={{ color: viewMode === 'Reading' ? '#050f05' : '#9ca3af' }}
+                            >
+                                Reading
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            activeOpacity={1}
+                            onPress={() => setViewMode('Translation')}
+                            className="flex-1 py-1.5 rounded-lg"
+                            style={{ backgroundColor: viewMode === 'Translation' ? '#10b981' : 'transparent' }}
                         >
-                            Translation
-                        </Text>
-                    </TouchableOpacity>
+                            <Text
+                                className="text-center font-bold text-xs"
+                                style={{ color: viewMode === 'Translation' ? '#050f05' : '#9ca3af' }}
+                            >
+                                Translation
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    {/* Font Size Controls */}
+                    <View className="flex-row items-center space-x-4 bg-[#142114] rounded-xl px-2 py-1">
+                        <Pressable
+                            onPress={() => setFontSize(prev => Math.max(26, prev - 1))}
+                            className={`w-7 h-7 items-center justify-center rounded-full ${readingTheme === 'dark' ? 'bg-[#050f05]' : 'bg-white'}`}
+                            style={({ pressed }) => ({ opacity: pressed ? 0.6 : 1 })}
+                        >
+                            <Minus size={16} color="#10b981" />
+                        </Pressable>
+                        <View className="items-center px-2">
+                            <Text className={`font-bold text-sm ${readingTheme === 'dark' ? 'text-white' : 'text-gray-800'}`}>{fontSize}</Text>
+                        </View>
+                        <Pressable
+                            onPress={() => setFontSize(prev => Math.min(35, prev + 1))}
+                            className={`w-7 h-7 items-center justify-center rounded-full ${readingTheme === 'dark' ? 'bg-[#050f05]' : 'bg-white'}`}
+                            style={({ pressed }) => ({ opacity: pressed ? 0.6 : 1 })}
+                        >
+                            <Plus size={16} color="#10b981" />
+                        </Pressable>
+                    </View>
                 </View>
 
                 {/* Sub-toggle for Language if Translation mode is active */}
                 {viewMode === 'Translation' && (
-                    <View className="flex-row justify-center mt-4 mb-2 space-x-6">
+                    <View className="flex-row justify-center mt-2 space-x-10 py-1">
                         <Pressable
                             onPress={() => setTranslationLanguage('ml')}
-                            className={`px-3 py-1 rounded-full border ${translationLanguage === 'ml' ? 'border-[#10b981] bg-[#10b98120]' : 'border-[#6b7280] bg-transparent'}`}
+                            className={`px-4 py-1 rounded-full border ${translationLanguage === 'ml' ? 'border-[#10b981] bg-[#10b98120]' : 'border-[#6b7280] bg-transparent'}`}
                             style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1 })}
                         >
-                            <Text className="text-sm font-bold" style={{ color: translationLanguage === 'ml' ? '#10b981' : '#6b7280' }}>Malayalam</Text>
+                            <Text className="text-[10px] font-bold" style={{ color: translationLanguage === 'ml' ? '#10b981' : '#6b7280' }}>Malayalam</Text>
                         </Pressable>
                         <View className="w-2" />
                         <Pressable
                             onPress={() => setTranslationLanguage('en')}
-                            className={`px-3 py-1 rounded-full border ${translationLanguage === 'en' ? 'border-[#10b981] bg-[#10b98120]' : 'border-[#6b7280] bg-transparent'}`}
+                            className={`px-4 py-1 rounded-full border ${translationLanguage === 'en' ? 'border-[#10b981] bg-[#10b98120]' : 'border-[#6b7280] bg-transparent'}`}
                             style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1 })}
                         >
-                            <Text className="text-sm font-bold" style={{ color: translationLanguage === 'en' ? '#10b981' : '#6b7280' }}>English</Text>
+                            <Text className="text-[10px] font-bold" style={{ color: translationLanguage === 'en' ? '#10b981' : '#6b7280' }}>English</Text>
                         </Pressable>
                     </View>
                 )}
@@ -351,7 +376,7 @@ export default function SurahScreen() {
             <ScrollView ref={scrollViewRef} className={`flex-1 px-4 pt-4 ${readingTheme === 'dark' ? 'bg-[#050f05]' : 'bg-[#c3dbc8]'}`} showsVerticalScrollIndicator={false}>
 
                 {(id !== '1' && id !== '9' && startIndex === 0 && !showAyahs) ? (
-                    <View className="items-center justify-center py-6 mb-4">
+                    <View className="items-center justify-center py-2 mb-1">
                         <Text className={`text-3xl font-bold ${readingTheme === 'dark' ? 'text-[#10b981]' : 'text-[#059669]'}`} style={{ fontFamily: 'System' }}>
                             بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
                         </Text>
@@ -424,8 +449,8 @@ export default function SurahScreen() {
 
                                     {/* Arabic Text (Uthmani) */}
                                     <Text
-                                        className={`text-3xl leading-[55px] font-bold text-right mb-6 ${readingTheme === 'dark' ? 'text-white' : 'text-gray-900'}`}
-                                        style={{ fontFamily: 'System' }}
+                                        className={`font-bold text-right mb-6 ${readingTheme === 'dark' ? 'text-white' : 'text-gray-900'}`}
+                                        style={{ fontFamily: 'System', fontSize: fontSize, lineHeight: fontSize * 1.8 }}
                                     >
                                         {removeBismillah(ayah.text, id as string)}
                                     </Text>
@@ -441,8 +466,8 @@ export default function SurahScreen() {
                 ) : (
                     <View className="mb-8 px-2 pb-12">
                         <Text
-                            className={`text-[28px] leading-[60px] font-bold text-justify ${readingTheme === 'dark' ? 'text-white' : 'text-gray-900'}`}
-                            style={{ fontFamily: 'System', writingDirection: 'rtl' }}
+                            className={`font-bold text-justify ${readingTheme === 'dark' ? 'text-white' : 'text-gray-900'}`}
+                            style={{ fontFamily: 'System', writingDirection: 'rtl', fontSize: fontSize, lineHeight: fontSize * 2.1 }}
                         >
                             {getReadingText()}
                         </Text>
